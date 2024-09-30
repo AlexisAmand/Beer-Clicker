@@ -8,8 +8,8 @@ For now, it's just a cup you click on.
 
 # Screenshots
 
-![ScreenShot](https://github.com/AlexisAmand/Banana-Clicker/blob/main/screenshots/beer-01.jpg)
-![ScreenShot](https://github.com/AlexisAmand/Banana-Clicker/blob/main/screenshots/beer-02.jpg)
+![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-01.jpg)
+![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-02.jpg)
 
 ##  My config
 
