@@ -13,6 +13,7 @@ public class BeerClicker : MonoBehaviour
     public Text specialBeerText; // Référence au texte UI pour la bière spéciale
     public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
+    public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class BeerClicker : MonoBehaviour
 
     private void OnMouseDown()
     {
+        clickSound.Play(); // Joue le son à chaque clic
 
         beersCollected++; // Augmente le compteur de bières
         beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
