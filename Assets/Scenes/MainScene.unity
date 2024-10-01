@@ -876,7 +876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.4
+  m_text: Version 0.4.2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f629c6e43dba4bf38cb74d8860150664, type: 2}
@@ -1726,7 +1726,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1966927013}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: ContinueGame
+        m_MethodName: LoadHelp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
