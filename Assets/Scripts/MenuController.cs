@@ -27,4 +27,14 @@ public class MenuController : MonoBehaviour
         Debug.Log("Quitter le jeu !");
         Application.Quit(); // Ne fonctionne pas dans l'éditeur, mais fonctionne en build
     }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainScene"); // Remplace par le nom de ta scène de menu
+    }
+
+    public void LoadHelp()
+    {
+        SceneManager.LoadScene("HelpScene"); // Remplace par le nom de ta scène de menu
+    }
 }
