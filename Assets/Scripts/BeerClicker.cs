@@ -8,20 +8,21 @@ using UnityEngine.SceneManagement;
 
 public class BeerClicker : MonoBehaviour
 {
-    public int beersCollected = 0; // Compteur de bières collectées
+    public int beersCollected; // Compteur de bières collectées
     public Text beersText; // Référence au texte UI pour le compteur
     public Text specialBeerText; // Référence au texte UI pour la bière spéciale
     public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
-
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
-    public int beersDrank = 0; // Nombre de bières bues
 
     private void Start()
     {
         specialBeerText.gameObject.SetActive(false); // Masque le texte de la bière spéciale au démarrage
 
         // Récupérer le nombre de bières bues si le jeu a été relancé
-        beersCollected = PlayerPrefs.GetInt("BeersDrank", 0);
+        beersCollected = PlayerPrefs.GetInt("beersCollected", 0);
+        Debug.Log("Loaded beersCollected: " + beersCollected);
+        beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
+
     }
 
     private void OnMouseDown()
@@ -41,6 +42,10 @@ public class BeerClicker : MonoBehaviour
 
         // Affiche "+1" à l'endroit du curseur
         ShowPlusOneEffect(Input.mousePosition);
+
+        Debug.Log("Saving beersCollected: " + beersCollected); // Debug pour vérifier la valeur avant sauvegarde
+        PlayerPrefs.SetInt("beersCollected", beersCollected);
+        PlayerPrefs.Save(); // Sauvegarde des données
     }
 
     private void ShowPlusOneEffect(Vector3 position)
@@ -90,9 +95,7 @@ public class BeerClicker : MonoBehaviour
     }
 
     public void LoadMainMenu()
-    {
-        PlayerPrefs.SetInt("BeersDrank", beersDrank);
-        PlayerPrefs.Save(); // Sauvegarde des données
+    {       
         SceneManager.LoadScene("MainScene"); // Remplace par le nom de ta scène de menu
     }
 
