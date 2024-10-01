@@ -15,4 +15,6 @@ public class ScreenshotTaker : MonoBehaviour
             Debug.Log("Screenshot captured: " + filePath);
         }
     }
+
+   
 }
