@@ -1,11 +1,15 @@
 using UnityEngine;
 
+// Ce script gére le background des divers écrans 
+
 public class BackgroundScaler : MonoBehaviour
 {
     private void Start()
     {
         ScaleToScreen();
     }
+
+    // Cette fonction permet d'adapter le fond à la taille de l'écran
 
     private void ScaleToScreen()
     {

@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using System;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class BeerClicker : MonoBehaviour
@@ -14,16 +12,25 @@ public class BeerClicker : MonoBehaviour
     public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
     public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
+    private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
+    public string savedBeers;
+
 
     private void Start()
     {
-        specialBeerText.gameObject.SetActive(false); // Masque le texte de la bière spéciale au démarrage
-
         // Récupérer le nombre de bières bues si le jeu a été relancé
         beersCollected = PlayerPrefs.GetInt("beersCollected", 0);
-        Debug.Log("Loaded beersCollected: " + beersCollected);
         beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
 
+        // Récupérer la liste des bières spéciales
+        string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
+        Debug.Log("inventaire de tout à l'heure :" + savedBeers);
+        specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
+        Debug.Log("Nombre de bières spéciales collectées : " + specialBeersCollected.Count);
+
+        
+        FindObjectOfType<Inventory>().UpdateInventoryText(specialBeersCollected);
+          
     }
 
     private void OnMouseDown()
@@ -39,14 +46,16 @@ public class BeerClicker : MonoBehaviour
             int randomIndex = UnityEngine.Random.Range(0, specialBeers.Count);
             string specialBeer = specialBeers[randomIndex];
             Debug.Log("You drink a " + specialBeer + " !");
+            FindObjectOfType<Inventory>().AddSpecialBeer(specialBeer);
             StartCoroutine(ShowSpecialBeerMessage(specialBeer)); // Lance la coroutine pour afficher le message
+            PlayerPrefs.Save(); // Sauvegarde l'inventaire
         }
 
         // Affiche "+1" à l'endroit du curseur
         ShowPlusOneEffect(Input.mousePosition);
-
+        
         Debug.Log("Saving beersCollected: " + beersCollected); // Debug pour vérifier la valeur avant sauvegarde
-        PlayerPrefs.SetInt("beersCollected", beersCollected);
+        PlayerPrefs.SetInt("beersCollected", beersCollected); 
         PlayerPrefs.Save(); // Sauvegarde des données
     }
 
@@ -55,7 +64,7 @@ public class BeerClicker : MonoBehaviour
         // Instancie le prefab "+1"
         GameObject plusOne = Instantiate(plusOnePrefab);
         RectTransform rectTransform = plusOne.GetComponent<RectTransform>();
-        rectTransform.SetParent(GameObject.Find("Canvas").transform, false); // Assure-toi que le "+1" est sous le Canvas
+        rectTransform.SetParent(GameObject.Find("Canvas").transform, false); 
 
         // Convertit la position de la souris de l'espace écran à l'espace local du Canvas
         Vector2 screenPoint = position;
@@ -89,16 +98,16 @@ public class BeerClicker : MonoBehaviour
     private IEnumerator ShowSpecialBeerMessage(string specialBeer)
     {
         specialBeerText.text = "You've drunk a " + specialBeer; // Met à jour le texte de la bière spéciale
-        specialBeerText.gameObject.SetActive(true); // Assure-toi que le texte est visible
-
-        yield return new WaitForSeconds(1f); // Attend 3 secondes
+        specialBeerText.gameObject.SetActive(true); 
+        
+        yield return new WaitForSeconds(1f); 
 
         specialBeerText.gameObject.SetActive(false); // Masque le texte après 3 secondes
     }
 
     public void LoadMainMenu()
     {       
-        SceneManager.LoadScene("MainScene"); // Remplace par le nom de ta scène de menu
+        SceneManager.LoadScene("MainScene"); 
     }
 
 }

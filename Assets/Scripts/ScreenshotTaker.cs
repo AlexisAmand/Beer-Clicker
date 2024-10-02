@@ -6,7 +6,7 @@ public class ScreenshotTaker : MonoBehaviour
 
     void Update()
     {
-        // Si tu appuies sur F12, prends une capture d'écran
+        // Si on appuie sur F12, prends une capture d'écran
         if (Input.GetKeyDown(KeyCode.S))
         {
             // Nom du fichier de capture avec un horodatage pour éviter les écrasements
@@ -15,6 +15,5 @@ public class ScreenshotTaker : MonoBehaviour
             Debug.Log("Screenshot captured: " + filePath);
         }
     }
-
-   
+  
 }
