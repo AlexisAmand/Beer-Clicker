@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -9,7 +10,8 @@ public class BeerClicker : MonoBehaviour
     public int beersCollected; // Compteur de bières collectées
     public Text beersText; // Référence au texte UI pour le compteur
     public Text specialBeerText; // Référence au texte UI pour la bière spéciale
-    public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
+    // public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
+    public List<string> specialBeers = new List<string>();
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
     public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
     private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
@@ -18,6 +20,15 @@ public class BeerClicker : MonoBehaviour
 
     private void Start()
     {
+        // récupération de la liste des bières spéciales
+        string filePath = Application.dataPath + "/beers.txt"; // Chemin relatif vers le fichier
+        LoadBeerNamesFromFile(filePath);
+        // Test d'affichage de la liste pour voir s'il y a des bugs
+        foreach (string beer in specialBeers)
+        {
+            Debug.Log("Bière spéciale chargée: " + beer);
+        }
+
         // Récupérer le nombre de bières bues si le jeu a été relancé
         beersCollected = PlayerPrefs.GetInt("beersCollected", 0);
         beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
@@ -108,6 +119,20 @@ public class BeerClicker : MonoBehaviour
     public void LoadMainMenu()
     {       
         SceneManager.LoadScene("MainScene"); 
+    }
+
+    // Charge les noms de bières depuis le fichier et remplit la liste
+    public void LoadBeerNamesFromFile(string filePath)
+    {
+        if (File.Exists(filePath))
+        {
+            string[] beersFromFile = File.ReadAllLines(filePath);
+            specialBeers.AddRange(beersFromFile); // Remplis la liste avec les lignes du fichier
+        }
+        else
+        {
+            Debug.LogError("Fichier non trouvé: " + filePath);
+        }
     }
 
 }
