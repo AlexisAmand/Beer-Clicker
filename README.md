@@ -18,6 +18,7 @@ For now, it's just a cup you click on.
 * Visual Studio 17.8.6
 * Visual Studio Code 1.93.1
 * Unity 2021.3.31f1
+* Gimp 2.10.38
 
 ## Did you find this page useful ?
 Why not thank me with a cup of coffee?

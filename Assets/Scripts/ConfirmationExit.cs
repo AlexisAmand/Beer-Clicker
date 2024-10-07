@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ConfirmationExit : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ConfirmationExit : MonoBehaviour
         }
     }
 
+    // affiche la fenêtre de confirmation
     public void ShowConfirmation()
     {
         Debug.Log("Ouverture de la fenêtre");
@@ -31,9 +33,11 @@ public class ConfirmationExit : MonoBehaviour
         ExitGame.gameObject.SetActive(true);
     }
 
+    // masque la fenêtre de confirmation
     public void HideConfirmation()
     {
         Debug.Log("Fermeture de la fenêtre");
+
         isConfirmationWindowActive = false;
         // Cacher la fenêtre de confirmation
         ExitGame.gameObject.SetActive(false);
