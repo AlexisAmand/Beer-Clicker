@@ -8,6 +8,7 @@ using Unity.Mathematics;
 using System;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
+using TMPro;
 
 public class BeerClicker : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class BeerClicker : MonoBehaviour
     // public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
     public List<string> specialBeers = new List<string>();
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
+
     public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
+    public AudioSource happyHourSound; // Référence au composant AudioSource pour le son de tic tac
+
     private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
     public string savedBeers;
     private bool isBonusActive = false; // Indicateur si le bonus est actif
@@ -26,7 +30,9 @@ public class BeerClicker : MonoBehaviour
     public Text BonusText; // Référence au texte UI pour le bonus
 
     public Button ButtonHappyHour; // Référence au bouton pour "bonus 1"
-    private int CostBonus1 = 150;
+    private int CostBonus1 = 10;
+
+    public int beerAmount = 1;
 
     private void Start()
     {
@@ -79,10 +85,24 @@ public class BeerClicker : MonoBehaviour
 
     private void OnMouseDown()
     {
+        clickSound.Play(); // Joue le son à chaque clic    
+        ShowPlusOneEffect(Input.mousePosition, beerAmount); 
+    }
 
-        clickSound.Play(); // Joue le son à chaque clic
+    private void ShowPlusOneEffect(Vector3 position, int amount)
+    {
 
-        beersCollected++; // Augmente le compteur de bières
+        if (plusOnePrefab != null)
+        {
+            Debug.Log("Prefab assigné correctement.");
+            plusOnePrefab.GetComponent<Text>().text = "+" + amount.ToString();
+        }
+        else
+        {
+            Debug.LogError("Le prefab plusOnePrefab n'est pas assigné !");
+        }
+
+        beersCollected = beersCollected + amount ; // Augmente le compteur de bières
         beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
 
         // Vérifie si une bière spéciale est trouvée
@@ -97,15 +117,34 @@ public class BeerClicker : MonoBehaviour
         }
 
         // Affiche "+1" à l'endroit du curseur
-        ShowPlusOneEffect(Input.mousePosition);
-        
-        Debug.Log("Saving beersCollected: " + beersCollected); // Debug pour vérifier la valeur avant sauvegarde
-        PlayerPrefs.SetInt("beersCollected", beersCollected); 
-        PlayerPrefs.Save(); // Sauvegarde des données
-    }
+        // ShowPlusOneEffect(Input.mousePosition); // a remettre si je restaure onmousedown
 
-    private void ShowPlusOneEffect(Vector3 position)
-    {
+        Debug.Log("Saving beersCollected: " + beersCollected); // Debug pour vérifier la valeur avant sauvegarde
+        PlayerPrefs.SetInt("beersCollected", beersCollected);
+        PlayerPrefs.Save(); // Sauvegarde des données
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Instancie le prefab "+1"
         GameObject plusOne = Instantiate(plusOnePrefab);
 
@@ -176,8 +215,12 @@ public class BeerClicker : MonoBehaviour
     {
         if (beersCollected >= CostBonus1)
         {
+
+
+
             beersCollected = beersCollected - CostBonus1;
             beersText.text = "Drunk beers : " + beersCollected;
+            happyHourSound.Play(); // Joue le son chaque seconde
             Debug.Log("Vous avez payé 150 bières pour le bonus");
             StartCoroutine(ActivateBonus1()); // Démarre la coroutine
         }
@@ -193,10 +236,13 @@ public class BeerClicker : MonoBehaviour
         int max = BonusDuration;
         isBonusActive = true; // Le bonus est maintenant actif
         BonusText.text = "It's happy hour !";
+        beerAmount = 5;
+
         ChronoText.gameObject.SetActive(true); // Affiche le chrono
 
         for (int i = 0; i < max; i++) // Boucle pendant la durée du bonus
         {
+            
             // Affiche le chrono en rouge pendant les 5 dernières secondes
             if (BonusDuration <= 5)
             {
@@ -207,6 +253,7 @@ public class BeerClicker : MonoBehaviour
                 ChronoText.text = string.Format("00:{0:D2}", BonusDuration);
             }
 
+            
             yield return new WaitForSeconds(1); // Attendre 1 seconde
             OnMouseDown(); // Incrémente le compteur de bières
             BonusDuration--;
@@ -214,6 +261,7 @@ public class BeerClicker : MonoBehaviour
 
         isBonusActive = false; // Le bonus se termine
         BonusText.text = "";
+        beerAmount = 1;
         ChronoText.gameObject.SetActive(false); // Cache le chrono
     }
 
