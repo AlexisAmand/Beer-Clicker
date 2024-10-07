@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using Unity.Mathematics;
 using System;
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 
 public class BeerClicker : MonoBehaviour
 {
@@ -22,8 +23,9 @@ public class BeerClicker : MonoBehaviour
     private bool isBonusActive = false; // Indicateur si le bonus est actif
     
     public Text ChronoText; // Référence au texte UI pour le chrono
+    public Text BonusText; // Référence au texte UI pour le bonus
 
-    public Button ButtonBonus1; // Référence au bouton pour "bonus 1"
+    public Button ButtonHappyHour; // Référence au bouton pour "bonus 1"
     private int CostBonus1 = 150;
 
     private void Start()
@@ -48,25 +50,36 @@ public class BeerClicker : MonoBehaviour
         Debug.Log("Nombre de bières spéciales collectées : " + specialBeersCollected.Count);
         FindObjectOfType<Inventory>().UpdateInventoryText(specialBeersCollected);
 
-        ButtonBonus1 = GameObject.Find("ButtonBonus1").GetComponent<Button>();
-       
+        // On vide le text des bonus
+        BonusText.text = "";
+        // On masque le chrono
+        ChronoText.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (ButtonHappyHour == null)
+        {
+            Debug.LogError("ButtonHappyHour is not assigned!");
+            return;
+        }
+
         if (beersCollected < CostBonus1 || isBonusActive == true)
         {
-            ButtonBonus1.interactable = false;
+            ButtonHappyHour.interactable = false;
         }
         else
         {
-            ButtonBonus1.interactable = true;
+            ButtonHappyHour.interactable = true;
         }
     }
 
     private void OnMouseDown()
     {
+
         clickSound.Play(); // Joue le son à chaque clic
 
         beersCollected++; // Augmente le compteur de bières
@@ -144,6 +157,7 @@ public class BeerClicker : MonoBehaviour
         SceneManager.LoadScene("MainScene"); 
     }
 
+    
     // Charge les noms de bières depuis le fichier et remplit la liste
     public void LoadBeerNamesFromFile(string filePath)
     {
@@ -178,6 +192,7 @@ public class BeerClicker : MonoBehaviour
         int BonusDuration = 20;
         int max = BonusDuration;
         isBonusActive = true; // Le bonus est maintenant actif
+        BonusText.text = "It's happy hour !";
         ChronoText.gameObject.SetActive(true); // Affiche le chrono
 
         for (int i = 0; i < max; i++) // Boucle pendant la durée du bonus
@@ -198,6 +213,7 @@ public class BeerClicker : MonoBehaviour
         }
 
         isBonusActive = false; // Le bonus se termine
+        BonusText.text = "";
         ChronoText.gameObject.SetActive(false); // Cache le chrono
     }
 

@@ -14,29 +14,29 @@ public class Inventory : MonoBehaviour
         {
             inventoryPanel.SetActive(false); // Cache le panel au démarrage d'une partie
             LoadInventory(); // Charge les bières sauvegardées
-    }
+        }
 
         // Cette fonction affiche/masque l'inventaire
         public void ToggleInventory()
-            {    
+           {    
                 inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-            }
+           }
 
-    // Ajoute une bière spéciale à la liste, vérifie les doublons, et sauvegarde la liste mise à jour.
+        // Ajoute une bière spéciale à la liste, vérifie les doublons, et sauvegarde la liste mise à jour.
 
-    public void AddSpecialBeer(string beerName)
-        {
-            // Vérifie si la bière n'est pas déjà dans l'inventaire
-            if (!specialBeersCollected.Contains(beerName))
+        public void AddSpecialBeer(string beerName)
             {
-                specialBeersCollected.Add(beerName);
-                UpdateInventoryText(specialBeersCollected); // Met à jour le texte de l'inventaire
+                // Vérifie si la bière n'est pas déjà dans l'inventaire
+                if (!specialBeersCollected.Contains(beerName))
+                {
+                    specialBeersCollected.Add(beerName);
+                    UpdateInventoryText(specialBeersCollected); // Met à jour le texte de l'inventaire
 
-                // Sauvegarde la liste des bières spéciales
-                PlayerPrefs.SetString("specialBeersCollected", string.Join(",", specialBeersCollected));
-                PlayerPrefs.Save();
+                    // Sauvegarde la liste des bières spéciales
+                    PlayerPrefs.SetString("specialBeersCollected", string.Join(",", specialBeersCollected));
+                    PlayerPrefs.Save();
+                }
             }
-        }
 
         // Met à jour le texte de l'inventaire pour afficher les bières collectées.
 
@@ -49,7 +49,6 @@ public class Inventory : MonoBehaviour
                     inventoryText.text += beer + "\n";
                 }
             }
-
 
         // Cette méthode charge les bières sauvegardées depuis PlayerPrefs et met à jour l'affichage.
         public void LoadInventory()
