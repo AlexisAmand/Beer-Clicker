@@ -2,8 +2,10 @@
 
 I've finally decided to learn Unity !
 
-For fun, I started developing clicker with beers.
+For fun, I started developing clicker with beers.  
 It's just a cup you click on.
+
+Optimized for 1920 x 1080 resolution.
 
 # Screenshots
 
