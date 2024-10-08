@@ -2,9 +2,8 @@
 
 I've finally decided to learn Unity !
 
-For fun, I started developing a “Banana” clone, but with beers.
-
-For now, it's just a cup you click on.
+For fun, I started developing clicker with beers.
+It's just a cup you click on.
 
 # Screenshots
 
