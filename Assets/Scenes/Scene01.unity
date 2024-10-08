@@ -3719,7 +3719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1149029508}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1889286804}
+        m_TargetAssemblyTypeName: BeerClicker, Assembly-CSharp
+        m_MethodName: DoubleBeerTimeBonus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1149029508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4335,6 +4347,9 @@ MonoBehaviour:
   ChronoText: {fileID: 295566307}
   BonusText: {fileID: 1992975547}
   ButtonHappyHour: {fileID: 696925688}
+  HappyHourText: {fileID: 812554173}
+  ButtonDoubleBeerTime: {fileID: 1149029507}
+  DoubleBeerTimeText: {fileID: 815035372}
   beerAmount: 1
 --- !u!65 &1889286805
 BoxCollider:

@@ -24,13 +24,19 @@ public class BeerClicker : MonoBehaviour
 
     private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
     public string savedBeers;
-    private bool isBonusActive = false; // Indicateur si le bonus est actif
     
-    public Text ChronoText; // Référence au texte UI pour le chrono
-    public Text BonusText; // Référence au texte UI pour le bonus
+    public Text ChronoText; // Référence au texte UI pour le chrono du bonus
+    public Text BonusText; // Référence au texte UI pour le bonus en cours
 
-    public Button ButtonHappyHour; // Référence au bouton pour "bonus 1"
-    private int CostBonus1 = 10;
+    public Button ButtonHappyHour; // Référence au bouton pour le bonus happy hour
+    private int CostBonus1 = 10; // Coût du bonus happy hour
+    public TextMeshProUGUI HappyHourText; // Référence au texte UI pour le bonus happy hour
+    private bool isBonus1Active = false; // Indicateur si le bonus est actif
+
+    public Button ButtonDoubleBeerTime; // Référence au bouton pour le bonus happy hour
+    private int CostBonus2 = 7; // Coût du bonus happy hour
+    public TextMeshProUGUI DoubleBeerTimeText; // Référence au texte UI pour le bonus happy hour
+    private bool isBonus2Active = false; // Indicateur si le bonus est actif
 
     public int beerAmount = 1;
 
@@ -61,25 +67,31 @@ public class BeerClicker : MonoBehaviour
         // On masque le chrono
         ChronoText.gameObject.SetActive(false);
 
+        // Afficher le coût des bonus
+        HappyHourText.text = CostBonus1.ToString();
+        DoubleBeerTimeText.text = CostBonus2.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (ButtonHappyHour == null)
         {
             Debug.LogError("ButtonHappyHour is not assigned!");
             return;
         }
 
-        if (beersCollected < CostBonus1 || isBonusActive == true)
+        if ((beersCollected < CostBonus1 || isBonus1Active == true) || (beersCollected < CostBonus2 || isBonus2Active == true))
         {
             ButtonHappyHour.interactable = false;
+            ButtonDoubleBeerTime.interactable = false;
+
         }
         else
         {
             ButtonHappyHour.interactable = true;
+            ButtonDoubleBeerTime.interactable = true;
+
         }
     }
 
@@ -122,28 +134,6 @@ public class BeerClicker : MonoBehaviour
         Debug.Log("Saving beersCollected: " + beersCollected); // Debug pour vérifier la valeur avant sauvegarde
         PlayerPrefs.SetInt("beersCollected", beersCollected);
         PlayerPrefs.Save(); // Sauvegarde des données
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // Instancie le prefab "+1"
         GameObject plusOne = Instantiate(plusOnePrefab);
@@ -220,23 +210,42 @@ public class BeerClicker : MonoBehaviour
 
             beersCollected = beersCollected - CostBonus1;
             beersText.text = "Drunk beers : " + beersCollected;
-            happyHourSound.Play(); // Joue le son chaque seconde
-            Debug.Log("Vous avez payé 150 bières pour le bonus");
-            StartCoroutine(ActivateBonus1()); // Démarre la coroutine
-        }
+            Debug.Log("Vous avez payé 10 bières pour le bonus");
+            StartCoroutine(ActivateBonus1(1)); // Indicateur si le bonus est actif)); // Démarre la coroutine
+}
         else
         {
             Debug.Log("Vous n'avez pas bu assez de bières !");
         }
     }
 
-    private IEnumerator ActivateBonus1()
+    private IEnumerator ActivateBonus1(int bonus)
     {
+        switch (bonus)
+        {
+            case 1:
+                BonusText.text = "It's happy hour !";
+                beerAmount = 5;
+                CostBonus1 = CostBonus1 * 10;
+                HappyHourText.text = FormatNumber(CostBonus1).ToString();
+                isBonus1Active = true;
+                break;
+
+            case 2:
+                BonusText.text = "It's double beer time !";
+                beerAmount = 2;
+                CostBonus2 = CostBonus2 * 10;
+                DoubleBeerTimeText.text = FormatNumber(CostBonus2).ToString();
+                isBonus2Active = true;
+                break;
+
+            default:
+                Debug.Log("Oup... pas de bonus...");
+                break;
+        }
+
         int BonusDuration = 20;
         int max = BonusDuration;
-        isBonusActive = true; // Le bonus est maintenant actif
-        BonusText.text = "It's happy hour !";
-        beerAmount = 5;
 
         ChronoText.gameObject.SetActive(true); // Affiche le chrono
 
@@ -259,11 +268,52 @@ public class BeerClicker : MonoBehaviour
             BonusDuration--;
         }
 
-        isBonusActive = false; // Le bonus se termine
+        switch (bonus)
+        {
+            case 1:
+                isBonus1Active = false;
+                break;
+
+            case 2:
+                isBonus2Active = false;
+                break;
+
+            default:
+                Debug.Log("Oup... pas de bonus...");
+                break;
+        }
+
         BonusText.text = "";
         beerAmount = 1;
         ChronoText.gameObject.SetActive(false); // Cache le chrono
     }
 
+
+    public void DoubleBeerTimeBonus()
+    {
+        if (beersCollected >= CostBonus2)
+        {
+            beersCollected = beersCollected - CostBonus2;
+            beersText.text = "Drunk beers : " + beersCollected;
+            Debug.Log("Vous avez payé 7 bières pour le bonus");
+            StartCoroutine(ActivateBonus1(2));
+        }
+        else
+        {
+            Debug.Log("Vous n'avez pas bu assez de bières !");
+        }
+    }
+
+    public string FormatNumber(int number)
+    {
+        if (number >= 1000000000)
+            return (number / 1000000000f).ToString("0.##") + "B";
+        else if (number >= 1000000)
+            return (number / 1000000f).ToString("0.##") + "M";
+        else if (number >= 1000)
+            return (number / 1000f).ToString("0.##") + "K";
+        else
+            return number.ToString();
+    }
 
 }
