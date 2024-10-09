@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.IO;
+using TMPro;
 
 // Ce script gére l'inventaire
 
@@ -8,16 +10,33 @@ public class Inventory : MonoBehaviour
     {
         public GameObject inventoryPanel; // Le panel qui s'affiche/masque
         public Text inventoryText; // Le texte où s'affichent les bières spéciales
+        public TextMeshProUGUI foundText; // Le texte où s'affichent les bières spéciales trouvées / à trouver
         private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
 
         private void Start()
         {
             inventoryPanel.SetActive(false); // Cache le panel au démarrage d'une partie
-            LoadInventory(); // Charge les bières sauvegardées
+            LoadInventory(); // Charge les bières sauvegardées           
         }
 
-        // Cette fonction affiche/masque l'inventaire
-        public void ToggleInventory()
+        private void Update()
+        {
+            // Récupération du nombre de lignes du fichier qui contient les bières à collectionner
+            string filePath = Application.dataPath + "/beers.txt";
+            int lineNumber = File.ReadAllLines(filePath).Length;
+            Debug.Log("nombre de bières trouvables (pour inventaire) :" + lineNumber);
+
+            // Récupération du nombre de bières déjà trouvées
+            string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
+            specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
+            Debug.Log("nombre de bières trouvées (pour inventaire) :" + specialBeersCollected.Count);
+
+            foundText.text = "Special beers found : " + lineNumber + " / " + specialBeersCollected.Count;
+            Debug.Log("inventaire :" + foundText.text);
+    }
+
+    // Cette fonction affiche/masque l'inventaire
+    public void ToggleInventory()
            {    
                 inventoryPanel.SetActive(!inventoryPanel.activeSelf);
            }
