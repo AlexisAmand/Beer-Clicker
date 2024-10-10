@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
             string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
             specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
 
-            foundText.text = "Special beers found : " + lineNumber + " / " + specialBeersCollected.Count;
+            foundText.text = "Special beers found : " + specialBeersCollected.Count +" / " + lineNumber;
 
             BoxCollider collider = boxColliderObject.GetComponent<BoxCollider>();
 
@@ -48,7 +48,6 @@ public class Inventory : MonoBehaviour
                     collider.enabled = true;
                 }
             
-
 
         }
 

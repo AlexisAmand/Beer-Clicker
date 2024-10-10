@@ -12,30 +12,23 @@ public class ConfirmationExit : MonoBehaviour
 
     void Update()
     {
-        if (isConfirmationWindowActive)
-        {
-            // Désactiver les interactions ailleurs
-            boxColliderObject.GetComponent<Collider>().enabled = false;
-        }
-        else
-        {
-            // Réactiver les interactions
-            boxColliderObject.GetComponent<Collider>().enabled = true;
-        }
+        boxColliderObject.SetActive(!isConfirmationWindowActive);
     }
 
     public void ShowConfirmation()
     {
         isConfirmationWindowActive = true;
-        // Afficher la fenêtre de confirmation
-        ExitGame.gameObject.SetActive(true);
+        // Désactiver le BoxCollider quand la fenêtre de confirmation est ouverte
+        ExitGame.SetActive(true);
     }
 
     public void HideConfirmation()
     {
-        SceneManager.LoadScene("MainScene");
-        isConfirmationWindowActive = false;
         // Cacher la fenêtre de confirmation
         ExitGame.gameObject.SetActive(false);
+        isConfirmationWindowActive = false;
+
+        // Charger la scène après avoir mis à jour l'état
+        SceneManager.LoadScene("MainScene");
     }
 }
