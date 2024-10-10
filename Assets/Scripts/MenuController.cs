@@ -32,7 +32,6 @@ public class MenuController : MonoBehaviour
     // Fonction pour quitter le jeu
     public void QuitGame()
     {
-        Debug.Log("Quitter le jeu !");
         Application.Quit();
     }
 

@@ -12,7 +12,6 @@ public class ScreenshotTaker : MonoBehaviour
             // Nom du fichier de capture avec un horodatage pour éviter les écrasements
             string filePath = screenshotFileName + "_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
             ScreenCapture.CaptureScreenshot(filePath);
-            Debug.Log("Screenshot captured: " + filePath);
         }
     }
   

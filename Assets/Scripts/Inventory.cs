@@ -12,11 +12,14 @@ public class Inventory : MonoBehaviour
         public Text inventoryText; // Le texte où s'affichent les bières spéciales
         public TextMeshProUGUI foundText; // Le texte où s'affichent les bières spéciales trouvées / à trouver
         private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
+        public GameObject boxColliderObject; // Référence au GameObject avec le BoxCollider
+        private bool isActive;
 
-        private void Start()
+    private void Start()
         {
             inventoryPanel.SetActive(false); // Cache le panel au démarrage d'une partie
-            LoadInventory(); // Charge les bières sauvegardées           
+            LoadInventory(); // Charge les bières sauvegardées
+            
         }
 
         private void Update()
@@ -24,22 +27,37 @@ public class Inventory : MonoBehaviour
             // Récupération du nombre de lignes du fichier qui contient les bières à collectionner
             string filePath = Application.dataPath + "/beers.txt";
             int lineNumber = File.ReadAllLines(filePath).Length;
-            Debug.Log("nombre de bières trouvables (pour inventaire) :" + lineNumber);
 
             // Récupération du nombre de bières déjà trouvées
             string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
             specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
-            Debug.Log("nombre de bières trouvées (pour inventaire) :" + specialBeersCollected.Count);
 
             foundText.text = "Special beers found : " + lineNumber + " / " + specialBeersCollected.Count;
-            Debug.Log("inventaire :" + foundText.text);
-    }
+
+            BoxCollider collider = boxColliderObject.GetComponent<BoxCollider>();
+
+            
+                if (isActive)
+                {
+
+                    collider.enabled = false;
+                }
+                else
+                {
+
+                    collider.enabled = true;
+                }
+            
+
+
+        }
 
     // Cette fonction affiche/masque l'inventaire
     public void ToggleInventory()
-           {    
-                inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-           }
+        {
+            isActive = !inventoryPanel.activeSelf;
+            inventoryPanel.SetActive(isActive);
+        }    
 
         // Ajoute une bière spéciale à la liste, vérifie les doublons, et sauvegarde la liste mise à jour.
 

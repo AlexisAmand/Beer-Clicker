@@ -26,7 +26,6 @@ public class ConfirmationExit : MonoBehaviour
 
     public void ShowConfirmation()
     {
-        Debug.Log("Ouverture de la fenêtre");
         isConfirmationWindowActive = true;
         // Afficher la fenêtre de confirmation
         ExitGame.gameObject.SetActive(true);
@@ -34,7 +33,6 @@ public class ConfirmationExit : MonoBehaviour
 
     public void HideConfirmation()
     {
-        Debug.Log("Fermeture de la fenêtre");
         SceneManager.LoadScene("MainScene");
         isConfirmationWindowActive = false;
         // Cacher la fenêtre de confirmation
