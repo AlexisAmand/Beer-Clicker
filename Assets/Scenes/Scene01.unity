@@ -4034,7 +4034,7 @@ PrefabInstance:
     - target: {fileID: 7878821413819595550, guid: 51767c2cf55cecf43b8d27417381d5e3, type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 2e5f07b34e840ad4cb83dd8483b11017, type: 3}
+      objectReference: {fileID: 2800000, guid: 02a7af3327178be44a2288bd18002086, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51767c2cf55cecf43b8d27417381d5e3, type: 3}
 --- !u!224 &1105650186 stripped
@@ -5027,8 +5027,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.494785, y: 15.421968, z: 0.2}
-  m_Center: {x: -0.48499084, y: 0.36909294, z: 0}
+  m_Size: {x: 31.020435, y: 14.824134, z: 0.2}
+  m_Center: {x: 0.84352684, y: 0.66801023, z: 0}
 --- !u!82 &1889286806
 AudioSource:
   m_ObjectHideFlags: 0
