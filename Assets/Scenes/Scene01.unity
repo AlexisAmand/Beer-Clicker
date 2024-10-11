@@ -4077,8 +4077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000014305, y: -0.000015259}
-  m_SizeDelta: {x: 60, y: 60}
+  m_AnchoredPosition: {x: 0, y: 0.0000021458}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119088879
 MonoBehaviour:
@@ -4100,7 +4100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ffa28ddb7f9b8e4a9919660ebac7df7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cedc76dc008019f4da239b12f1f01b4a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5016,7 +5016,6 @@ MonoBehaviour:
   DoubleBeerTimeText: {fileID: 815035372}
   ButtonTipsyTaps: {fileID: 1915087067}
   TipsyTapsText: {fileID: 1771882399}
-  beerAmount: 1
 --- !u!65 &1889286805
 BoxCollider:
   m_ObjectHideFlags: 0

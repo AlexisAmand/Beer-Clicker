@@ -9,7 +9,11 @@ Bière icônes créées par Freepik - Flaticon :
 https://www.flaticon.com/fr/icones-gratuites/biere
 
 Pluie icônes créées par tulpahn - Flaticon :
-https://www.flaticon.com/fr/icones-gratuites/pluie
+https://www.flaticon.com/fr/icones-gratuites/pluie+
+
+<a href="https://www.flaticon.com/fr/icones-gratuites/ivre" title="ivre icônes">Ivre icônes créées par Smashicons - Flaticon</a>
 
 Texture bois :
 https://opengameart.org/content/light-wood-1024x1024
+
+Merci à Nova pour son aide !

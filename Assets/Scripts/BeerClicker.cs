@@ -16,7 +16,6 @@ public class BeerClicker : MonoBehaviour
     public int beersCollected; // Compteur de bières collectées
     public Text beersText; // Référence au texte UI pour le compteur
     public Text specialBeerText; // Référence au texte UI pour la bière spéciale
-    // public List<string> specialBeers = new List<string> { "Beer-illiant", "Cheers to Beer", "Beer-lievable", "Beer-rito", "Beer-thday", "Beer-ocity" }; // Liste des bières spéciales
     public List<string> specialBeers = new List<string>();
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
 
@@ -28,24 +27,24 @@ public class BeerClicker : MonoBehaviour
     
     public Text ChronoText; // Référence au texte UI pour le chrono du bonus
     public Text BonusText; // Référence au texte UI pour le bonus en cours
-    int BonusDuration; // Durée du bonus
+    private int BonusDuration; // Durée d'un bonus
 
     public Button ButtonHappyHour; // Référence au bouton pour le bonus happy hour
     private int CostBonus1 = 10; // Coût du bonus happy hour
     public TextMeshProUGUI HappyHourText; // Référence au texte UI pour le bonus happy hour
-    private bool isBonus1Active = false; // Indicateur si le bonus est actif
+    private bool isBonus1Active = false; // Indicateur si le bonus happy hour est actif
 
-    public Button ButtonDoubleBeerTime; // Référence au bouton pour le bonus happy hour
-    private int CostBonus2 = 7; // Coût du bonus happy hour
-    public TextMeshProUGUI DoubleBeerTimeText; // Référence au texte UI pour le bonus happy hour
-    private bool isBonus2Active = false; // Indicateur si le bonus est actif
+    public Button ButtonDoubleBeerTime; // Référence au bouton pour le bonus Double Beer Time
+    private int CostBonus2 = 7; // Coût du bonus Double Beer Time
+    public TextMeshProUGUI DoubleBeerTimeText; // Référence au texte UI pour le bonus Double Beer Time
+    private bool isBonus2Active = false; // Indicateur si le bonus Double Beer Time est actif
 
-    public Button ButtonTipsyTaps; // Référence au bouton pour le bonus happy hour
-    private int CostBonus3 = 15; // Coût du bonus happy hour
-    public TextMeshProUGUI TipsyTapsText; // Référence au texte UI pour le bonus happy hour
-    private bool isBonus3Active = false; // Indicateur si le bonus est actif
+    public Button ButtonTipsyTaps; // Référence au bouton pour le bonus Tipsy Taps
+    private int CostBonus3 = 15; // Coût du bonus Tipsy Taps
+    public TextMeshProUGUI TipsyTapsText; // Référence au texte UI pour le bonus Tipsy Taps
+    private bool isBonus3Active = false; // Indicateur si le bonus Tipsy Taps est actif
 
-    public int beerAmount = 1;
+    private int beerAmount = 1;
 
     private void Start()
     {
@@ -201,10 +200,8 @@ public class BeerClicker : MonoBehaviour
     private IEnumerator ShowSpecialBeerMessage(string specialBeer)
     {
         specialBeerText.text = "You've drunk a " + specialBeer; // Met à jour le texte de la bière spéciale
-        specialBeerText.gameObject.SetActive(true); 
-        
+        specialBeerText.gameObject.SetActive(true);         
         yield return new WaitForSeconds(1f); 
-
         specialBeerText.gameObject.SetActive(false); // Masque le texte après 3 secondes
     }
 
