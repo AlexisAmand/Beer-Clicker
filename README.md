@@ -1,11 +1,12 @@
 # Beer Clicker
 
-I've finally decided to learn Unity !
+I've finally decided to learn Unity!
 
-For fun, I started developing clicker with beers.  
-It's just a cup you click on.
+For fun, I started developing a clicker game centered around beers. It's just a cup you click on, but with fun bonuses and a unique inventory system to keep things exciting.  
 
 Optimized for 1920 x 1080 resolution.
+
+I hope you enjoy it !  
 
 # Screenshots
 
@@ -16,7 +17,7 @@ Optimized for 1920 x 1080 resolution.
 ##  My config
 
 * Windows 11
-* Visual Studio 17.8.6
+* Visual Studio 17.11.5
 * Visual Studio Code 1.93.1
 * Unity 2021.3.31f1
 * Gimp 2.10.38

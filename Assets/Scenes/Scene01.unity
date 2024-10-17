@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X / X
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4034,7 +4034,7 @@ PrefabInstance:
     - target: {fileID: 7878821413819595550, guid: 51767c2cf55cecf43b8d27417381d5e3, type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 02a7af3327178be44a2288bd18002086, type: 3}
+      objectReference: {fileID: 2800000, guid: 0b1fff5b8efcdc54db8a9c5cc73c685b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51767c2cf55cecf43b8d27417381d5e3, type: 3}
 --- !u!224 &1105650186 stripped
@@ -4997,24 +4997,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc44e983c520e8498f20932d10b3e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beersCollected: 0
   beersText: {fileID: 356125707}
   specialBeerText: {fileID: 184910}
-  specialBeers:
-  - Cheer Beer
-  - Fierce Beer
-  - Beer-illiant
   plusOnePrefab: {fileID: 1765634945705548076, guid: 5cb91c848da1621419bdbb46f780b784, type: 3}
   clickSound: {fileID: 1889286806}
   bonusSound: {fileID: 1889286807}
   savedBeers: 
   ChronoText: {fileID: 295566307}
   BonusText: {fileID: 1992975547}
-  ButtonHappyHour: {fileID: 696925688}
+  buttons:
+  - {fileID: 740754360}
+  - {fileID: 2070453908}
+  - {fileID: 696925688}
+  - {fileID: 1149029507}
+  - {fileID: 1915087067}
   HappyHourText: {fileID: 812554173}
-  ButtonDoubleBeerTime: {fileID: 1149029507}
   DoubleBeerTimeText: {fileID: 815035372}
-  ButtonTipsyTaps: {fileID: 1915087067}
   TipsyTapsText: {fileID: 1771882399}
 --- !u!65 &1889286805
 BoxCollider:

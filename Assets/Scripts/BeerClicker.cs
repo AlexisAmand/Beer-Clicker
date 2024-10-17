@@ -13,10 +13,10 @@ using UnityEngine.XR;
 
 public class BeerClicker : MonoBehaviour
 {
-    public int beersCollected; // Compteur de bières collectées
+    private int beersCollected; // Compteur de bières collectées
     public Text beersText; // Référence au texte UI pour le compteur
     public Text specialBeerText; // Référence au texte UI pour la bière spéciale
-    public List<string> specialBeers = new List<string>();
+    private List<string> specialBeers = new List<string>();
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
 
     public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
@@ -29,17 +29,19 @@ public class BeerClicker : MonoBehaviour
     public Text BonusText; // Référence au texte UI pour le bonus en cours
     private int BonusDuration; // Durée d'un bonus
 
-    public Button ButtonHappyHour; // Référence au bouton pour le bonus happy hour
+    public Button[] buttons;
+
+    // buttons[2] Référence au bouton pour le bonus happy hour
     private int CostBonus1 = 10; // Coût du bonus happy hour
     public TextMeshProUGUI HappyHourText; // Référence au texte UI pour le bonus happy hour
     private bool isBonus1Active = false; // Indicateur si le bonus happy hour est actif
 
-    public Button ButtonDoubleBeerTime; // Référence au bouton pour le bonus Double Beer Time
+    // buttons[3] Référence au bouton pour le bonus Double Beer Time
     private int CostBonus2 = 7; // Coût du bonus Double Beer Time
     public TextMeshProUGUI DoubleBeerTimeText; // Référence au texte UI pour le bonus Double Beer Time
     private bool isBonus2Active = false; // Indicateur si le bonus Double Beer Time est actif
 
-    public Button ButtonTipsyTaps; // Référence au bouton pour le bonus Tipsy Taps
+    // buttons[4] Référence au bouton pour le bonus Tipsy Taps
     private int CostBonus3 = 15; // Coût du bonus Tipsy Taps
     public TextMeshProUGUI TipsyTapsText; // Référence au texte UI pour le bonus Tipsy Taps
     private bool isBonus3Active = false; // Indicateur si le bonus Tipsy Taps est actif
@@ -49,7 +51,8 @@ public class BeerClicker : MonoBehaviour
     private void Start()
     {
         // récupération de la liste des bières spéciales
-        string filePath = Application.dataPath + "/beers.txt"; // Chemin relatif vers le fichier
+        //string filePath = Application.dataPath + "/beers.txt";
+        string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
         LoadBeerNamesFromFile(filePath);
 
         // Récupérer le nombre de bières bues si le jeu a été relancé
@@ -79,45 +82,45 @@ public class BeerClicker : MonoBehaviour
 
         if (beersCollected < CostBonus1)
         {
-            ButtonHappyHour.interactable = false;
-
-
+            buttons[2].interactable = false;
         }
         else
         {
-            ButtonHappyHour.interactable = true;
+            buttons[2].interactable = true;
         }
 
         if (beersCollected < CostBonus2)
         {
          
-            ButtonDoubleBeerTime.interactable = false;
+            buttons[3].interactable = false;
         }
         else
         {
-            ButtonDoubleBeerTime.interactable = true;
+            buttons[3].interactable = true;
         }
 
         if (beersCollected < CostBonus3)
         {
-            ButtonTipsyTaps.interactable = false;
+            buttons[4].interactable = false;
         }
         else
         {
-            ButtonTipsyTaps.interactable = true;
+            buttons[4].interactable = true;
         }
 
         if (isBonus1Active == true || isBonus2Active == true || isBonus3Active == true)
         {
-            ButtonHappyHour.interactable = false;
-            ButtonDoubleBeerTime.interactable = false;
-            ButtonTipsyTaps.interactable = false;
+            foreach (Button button in buttons)
+            {
+                button.interactable = false; // Désactive le bouton
+            }
         }
         else
         {
-            ButtonHappyHour.interactable = true;
-            ButtonDoubleBeerTime.interactable = true;
-            ButtonTipsyTaps.interactable = true;
+            foreach (Button button in buttons)
+            {
+                button.interactable = true; // Désactive le bouton
+            }
         }
 
     }
@@ -288,7 +291,7 @@ public class BeerClicker : MonoBehaviour
 
         for (int i = 0; i < max; i++) // Boucle pendant la durée du bonus
         {
-
+            
             // Affiche le chrono en rouge pendant les 5 dernières secondes
             if (BonusDuration <= max / 4)
             {
