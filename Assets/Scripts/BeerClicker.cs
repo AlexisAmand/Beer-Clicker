@@ -4,12 +4,21 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using Unity.Mathematics;
-using System;
-using Unity.Burst.CompilerServices;
-using Unity.VisualScripting;
 using TMPro;
-using UnityEngine.XR;
+
+[System.Serializable]
+public class Message
+{
+    public string key;
+    public string value;
+}
+
+[System.Serializable]
+public class MessageData
+{
+    public List<Message> messages;
+}
+
 
 public class BeerClicker : MonoBehaviour
 {
@@ -51,12 +60,10 @@ public class BeerClicker : MonoBehaviour
 
     private int beerAmount = 1;
 
+    private MessageData messageData;
+
     private void Start()
     {
-
-        Debug.Log("Bonjour ! Bienvenue dans la taverne !"); // Debug pour chaque case
-        FunnyMessage.text = "Hello there ! ça fait toujours plaisir de te voir.";
-        StartCoroutine(showmessage());
 
         MessagePanel.gameObject.SetActive(false);
 
@@ -83,6 +90,31 @@ public class BeerClicker : MonoBehaviour
         HappyHourText.text = CostBonus1.ToString();
         DoubleBeerTimeText.text = CostBonus2.ToString();
         TipsyTapsText.text = CostBonus3.ToString();
+
+        string MessageFilePath = Path.Combine(Application.streamingAssetsPath, "messages.json");
+        Debug.Log("Chemin du fichier JSON: " + MessageFilePath);
+
+        if (File.Exists(MessageFilePath))
+        {
+            string json = File.ReadAllText(MessageFilePath);
+            Debug.Log("Contenu du JSON : " + json); // Pour vérifier le contenu
+
+            // Désérialisation avec JsonUtility
+            messageData = JsonUtility.FromJson<MessageData>(json);
+
+            if (messageData != null && messageData.messages != null)
+            {
+                Debug.Log("JSON chargé correctement !");
+            }
+            else
+            {
+                Debug.LogError("messageData ou messageData.messages est null.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Le fichier JSON n'existe pas à ce chemin.");
+        }
 
     }
 
@@ -131,6 +163,11 @@ public class BeerClicker : MonoBehaviour
             {
                 button.interactable = true; // Désactive le bouton
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))  // Pour tester manuellement
+        {
+            StartCoroutine(ShowMessage());
         }
 
     }
@@ -392,37 +429,32 @@ public class BeerClicker : MonoBehaviour
     {
         Debug.Log("Valeur de beers : " + beers); // Vérifie la valeur de beers
 
-        switch (beers)
+        // Convertir beers en string
+        string beersKey = beers.ToString();
+
+        // Rechercher le message correspondant
+        foreach (Message msg in messageData.messages)
         {
-            case 5:
-                Debug.Log("Message pour 128 bières");
-                FunnyMessage.text = "C'est dingue ! Tu as bu plus de bière qu'un Czech Republic  en un an !";
-                StartCoroutine(showmessage());
-                break;
-            case 10:
-                Debug.Log("Message pour 108 bières");
-                FunnyMessage.text = "Whaou ! Tu as bu plus de bière qu'un Australien  en un an !";
-                StartCoroutine(showmessage());
-                break;
-            case 15:
-                Debug.Log("Message pour 108 bières");
-                FunnyMessage.text = "Vous avez-bu plus de bière qu'un Roumain  en un an !";
-                StartCoroutine(showmessage());
-                break;
-            case 20:
-                Debug.Log("Message pour 99 bières");
-                FunnyMessage.text = "Vous avez-bu plus de bière qu'un Allemand  en un an !";
-                StartCoroutine(showmessage());
-                break;
-            default:
-                break;
+            if (msg.key == beersKey)
+            {
+                Debug.Log("Message trouvé : " + msg.value);
+                FunnyMessage.text = msg.value; // Assigne le message trouvé
+                StartCoroutine(ShowMessage()); // Affiche le message
+                return; // Sortir de la méthode après avoir trouvé le message
+            }
         }
+
+        Debug.LogWarning("Aucun message trouvé pour " + beers);
     }
 
-    public IEnumerator showmessage()
+
+
+    public IEnumerator ShowMessage()
     {
+        Debug.Log("Activation du panel");
         MessagePanel.gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
+        Debug.Log("Désactivation du panel");
         MessagePanel.gameObject.SetActive(false);
     }
 
