@@ -2,7 +2,7 @@
 
 I've finally decided to learn Unity!
 
-For fun, I started developing a clicker game centered around beers. It's just a cup you click on, but with fun bonuses and a unique inventory system to keep things exciting.  
+For fun, I started developing a clicker game centered around beers. It's just a tavern you click on, but with fun bonuses and a unique inventory system to keep things exciting.  
 
 Optimized for 1920 x 1080 resolution.
 
@@ -13,6 +13,7 @@ I hope you enjoy it !
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-01.png)
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-02.png)
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-03.png)
+![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-04.png)
 
 ##  My config
 

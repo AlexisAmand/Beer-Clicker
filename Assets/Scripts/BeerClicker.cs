@@ -1,4 +1,4 @@
-using System.IO;
+ï»¿using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -13,53 +13,63 @@ using UnityEngine.XR;
 
 public class BeerClicker : MonoBehaviour
 {
-    private int beersCollected; // Compteur de bières collectées
-    public Text beersText; // Référence au texte UI pour le compteur
-    public Text specialBeerText; // Référence au texte UI pour la bière spéciale
+    private int beersCollected; // Compteur de biÃ¨res collectÃ©es
+    public Text beersText; // RÃ©fÃ©rence au texte UI pour le compteur
+    public Text specialBeerText; // RÃ©fÃ©rence au texte UI pour la biÃ¨re spÃ©ciale
     private List<string> specialBeers = new List<string>();
-    public GameObject plusOnePrefab; // Référence au prefab pour "+1"
+    public GameObject plusOnePrefab; // RÃ©fÃ©rence au prefab pour "+1"
 
-    public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
-    public AudioSource bonusSound; // Référence au composant AudioSource pour le son de clic sur un bonus
+    public AudioSource clickSound; // RÃ©fÃ©rence au composant AudioSource pour le son de clic
+    public AudioSource bonusSound; // RÃ©fÃ©rence au composant AudioSource pour le son de clic sur un bonus
 
-    private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
+    private List<string> specialBeersCollected = new List<string>(); // Liste des biÃ¨res spÃ©ciales collectÃ©es
     public string savedBeers;
     
-    public Text ChronoText; // Référence au texte UI pour le chrono du bonus
-    public Text BonusText; // Référence au texte UI pour le bonus en cours
-    private int BonusDuration; // Durée d'un bonus
+    public Text ChronoText; // RÃ©fÃ©rence au texte UI pour le chrono du bonus
+    public Text BonusText; // RÃ©fÃ©rence au texte UI pour le bonus en cours
+    private int BonusDuration; // DurÃ©e d'un bonus
 
     public Button[] buttons;
 
-    // buttons[2] Référence au bouton pour le bonus happy hour
-    private int CostBonus1 = 10; // Coût du bonus happy hour
-    public TextMeshProUGUI HappyHourText; // Référence au texte UI pour le bonus happy hour
+    // buttons[2] RÃ©fÃ©rence au bouton pour le bonus happy hour
+    private int CostBonus1 = 10; // CoÃ»t du bonus happy hour
+    public TextMeshProUGUI HappyHourText; // RÃ©fÃ©rence au texte UI pour le bonus happy hour
     private bool isBonus1Active = false; // Indicateur si le bonus happy hour est actif
 
-    // buttons[3] Référence au bouton pour le bonus Double Beer Time
-    private int CostBonus2 = 7; // Coût du bonus Double Beer Time
-    public TextMeshProUGUI DoubleBeerTimeText; // Référence au texte UI pour le bonus Double Beer Time
+    // buttons[3] RÃ©fÃ©rence au bouton pour le bonus Double Beer Time
+    private int CostBonus2 = 7; // CoÃ»t du bonus Double Beer Time
+    public TextMeshProUGUI DoubleBeerTimeText; // RÃ©fÃ©rence au texte UI pour le bonus Double Beer Time
     private bool isBonus2Active = false; // Indicateur si le bonus Double Beer Time est actif
 
-    // buttons[4] Référence au bouton pour le bonus Tipsy Taps
-    private int CostBonus3 = 15; // Coût du bonus Tipsy Taps
-    public TextMeshProUGUI TipsyTapsText; // Référence au texte UI pour le bonus Tipsy Taps
+    // buttons[4] RÃ©fÃ©rence au bouton pour le bonus Tipsy Taps
+    private int CostBonus3 = 15; // CoÃ»t du bonus Tipsy Taps
+    public TextMeshProUGUI TipsyTapsText; // RÃ©fÃ©rence au texte UI pour le bonus Tipsy Taps
     private bool isBonus3Active = false; // Indicateur si le bonus Tipsy Taps est actif
+
+    public TextMeshProUGUI FunnyMessage; // RÃ©fÃ©rence au texte UI pour le message marrant
+    public GameObject MessagePanel; // Le panel qui s'affiche/masque
 
     private int beerAmount = 1;
 
     private void Start()
     {
-        // récupération de la liste des bières spéciales
+
+        Debug.Log("Bonjour ! Bienvenue dans la taverne !"); // Debug pour chaque case
+        FunnyMessage.text = "Hello there ! Ã§a fait toujours plaisir de te voir.";
+        StartCoroutine(showmessage());
+
+        MessagePanel.gameObject.SetActive(false);
+
+        // rÃ©cupÃ©ration de la liste des biÃ¨res spÃ©ciales
         //string filePath = Application.dataPath + "/beers.txt";
         string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
         LoadBeerNamesFromFile(filePath);
 
-        // Récupérer le nombre de bières bues si le jeu a été relancé
+        // RÃ©cupÃ©rer le nombre de biÃ¨res bues si le jeu a Ã©tÃ© relancÃ©
         beersCollected = PlayerPrefs.GetInt("beersCollected", 0);
-        beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
+        beersText.text = "Drunk beers : " + beersCollected; // Met Ã  jour le texte affichÃ©
 
-        // Récupérer la liste des bières spéciales
+        // RÃ©cupÃ©rer la liste des biÃ¨res spÃ©ciales
         string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
         specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
         FindObjectOfType<Inventory>().UpdateInventoryText(specialBeersCollected);
@@ -69,7 +79,7 @@ public class BeerClicker : MonoBehaviour
         // On masque le chrono
         ChronoText.gameObject.SetActive(false);
 
-        // Afficher le coût des bonus
+        // Afficher le coÃ»t des bonus
         HappyHourText.text = CostBonus1.ToString();
         DoubleBeerTimeText.text = CostBonus2.ToString();
         TipsyTapsText.text = CostBonus3.ToString();
@@ -112,29 +122,30 @@ public class BeerClicker : MonoBehaviour
         {
             foreach (Button button in buttons)
             {
-                button.interactable = false; // Désactive le bouton
+                button.interactable = false; // DÃ©sactive le bouton
             }
         }
         else
         {
             foreach (Button button in buttons)
             {
-                button.interactable = true; // Désactive le bouton
+                button.interactable = true; // DÃ©sactive le bouton
             }
         }
 
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
-        clickSound.Play(); // Joue le son à chaque clic    
+        clickSound.Play(); // Joue le son Ã  chaque clic    
 
         if (isBonus3Active)
         {
             beerAmount = UnityEngine.Random.Range(0, 15);
         }
 
-        ShowPlusOneEffect(Input.mousePosition, beerAmount); 
+        ShowPlusOneEffect(Input.mousePosition, beerAmount);
+        
     }
 
     private void ShowPlusOneEffect(Vector3 position, int amount)
@@ -145,11 +156,12 @@ public class BeerClicker : MonoBehaviour
             plusOnePrefab.GetComponent<Text>().text = "+" + amount.ToString();
         }
 
-        beersCollected = beersCollected + amount ; // Augmente le compteur de bières
-        beersText.text = "Drunk beers : " + beersCollected; // Met à jour le texte affiché
+        beersCollected = beersCollected + amount ; // Augmente le compteur de biÃ¨res
+        beersText.text = "Drunk beers : " + beersCollected; // Met Ã  jour le texte affichÃ©
+        GetFunnyMessage(beersCollected);
 
-        // Vérifie si une bière spéciale est trouvée
-        if (UnityEngine.Random.value < 0.1f) // 10% de chance d'obtenir une bière spéciale
+        // VÃ©rifie si une biÃ¨re spÃ©ciale est trouvÃ©e
+        if (UnityEngine.Random.value < 0.1f) // 10% de chance d'obtenir une biÃ¨re spÃ©ciale
         {
             int randomIndex = UnityEngine.Random.Range(0, specialBeers.Count);
             string specialBeer = specialBeers[randomIndex];
@@ -158,11 +170,11 @@ public class BeerClicker : MonoBehaviour
             PlayerPrefs.Save(); // Sauvegarde l'inventaire
         }
 
-        // Affiche "+1" à l'endroit du curseur
-        // ShowPlusOneEffect(Input.mousePosition); // a remettre si je restaure onmousedown
+        // Affiche "+1" Ã  l'endroit du curseur
+        // ShowPlusOneEffect(Input.mousePosition); // a remettre si je restaureDrinkBeer
 
         PlayerPrefs.SetInt("beersCollected", beersCollected);
-        PlayerPrefs.Save(); // Sauvegarde des données
+        PlayerPrefs.Save(); // Sauvegarde des donnÃ©es
 
         // Instancie le prefab "+1"
         GameObject plusOne = Instantiate(plusOnePrefab);
@@ -170,23 +182,23 @@ public class BeerClicker : MonoBehaviour
         RectTransform rectTransform = plusOne.GetComponent<RectTransform>();
         rectTransform.SetParent(GameObject.Find("Canvas").transform, false); 
 
-        // Convertit la position de la souris de l'espace écran à l'espace local du Canvas
+        // Convertit la position de la souris de l'espace Ã©cran Ã  l'espace local du Canvas
         Vector2 screenPoint = position;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform.parent as RectTransform, screenPoint, null, out Vector2 localPoint);
-        rectTransform.anchoredPosition = localPoint; // Positionne le "+1" à l'endroit du curseur
+        rectTransform.anchoredPosition = localPoint; // Positionne le "+1" Ã  l'endroit du curseur
 
-        // Lance la coroutine pour faire disparaître le "+1"
+        // Lance la coroutine pour faire disparaÃ®tre le "+1"
         StartCoroutine(MovePlusOne(plusOne));
     }
 
     private IEnumerator MovePlusOne(GameObject plusOne)
     {
 
-        float duration = 4f; // Durée du mouvement
+        float duration = 4f; // DurÃ©e du mouvement
         float elapsedTime = 0f;
 
         Vector3 startPos = plusOne.transform.position;
-        Vector3 targetPos = startPos + new Vector3(0, 50, 0); // Déplace vers le haut
+        Vector3 targetPos = startPos + new Vector3(0, 50, 0); // DÃ©place vers le haut
 
         // Boucle d'animation
         while (elapsedTime < duration)
@@ -196,16 +208,16 @@ public class BeerClicker : MonoBehaviour
             yield return null;
         }
 
-        Destroy(plusOne); // Détruit l'objet après la fin de l'animation
+        Destroy(plusOne); // DÃ©truit l'objet aprÃ¨s la fin de l'animation
     }
 
-    // Coroutine pour afficher le message de bière spéciale
+    // Coroutine pour afficher le message de biÃ¨re spÃ©ciale
     private IEnumerator ShowSpecialBeerMessage(string specialBeer)
     {
-        specialBeerText.text = "You've drunk a " + specialBeer; // Met à jour le texte de la bière spéciale
+        specialBeerText.text = "You've drunk a " + specialBeer; // Met Ã  jour le texte de la biÃ¨re spÃ©ciale
         specialBeerText.gameObject.SetActive(true);         
         yield return new WaitForSeconds(1f); 
-        specialBeerText.gameObject.SetActive(false); // Masque le texte après 3 secondes
+        specialBeerText.gameObject.SetActive(false); // Masque le texte aprÃ¨s 3 secondes
     }
 
     public void LoadMainMenu()
@@ -214,7 +226,7 @@ public class BeerClicker : MonoBehaviour
     }
 
     
-    // Charge les noms de bières depuis le fichier et remplit la liste
+    // Charge les noms de biÃ¨res depuis le fichier et remplit la liste
     public void LoadBeerNamesFromFile(string filePath)
     {
         if (File.Exists(filePath))
@@ -231,7 +243,7 @@ public class BeerClicker : MonoBehaviour
             beersCollected = beersCollected - CostBonus1;
             beersText.text = "Drunk beers : " + beersCollected;
             bonusSound.Play(); // Joue le son quand on clic sur le bonus 
-            StartCoroutine(ActivateBonus1(1)); // Indicateur si le bonus est actif)); // Démarre la coroutine
+            StartCoroutine(ActivateBonus1(1)); // Indicateur si le bonus est actif)); // DÃ©marre la coroutine
         }
     }
 
@@ -289,10 +301,10 @@ public class BeerClicker : MonoBehaviour
 
         ChronoText.gameObject.SetActive(true); // Affiche le chrono
 
-        for (int i = 0; i < max; i++) // Boucle pendant la durée du bonus
+        for (int i = 0; i < max; i++) // Boucle pendant la durÃ©e du bonus
         {
             
-            // Affiche le chrono en rouge pendant les 5 dernières secondes
+            // Affiche le chrono en rouge pendant les 5 derniÃ¨res secondes
             if (BonusDuration <= max / 4)
             {
                 ChronoText.text = "<color=#FF0000>" + string.Format("00:{0:D2}", BonusDuration) + "</color>";
@@ -304,7 +316,7 @@ public class BeerClicker : MonoBehaviour
 
 
             yield return new WaitForSeconds(1); // Attendre 1 seconde
-            OnMouseDown(); // Incrémente le compteur de bières
+           OnMouseDown(); // IncrÃ©mente le compteur de biÃ¨res
             BonusDuration--;
         }
 
@@ -340,10 +352,10 @@ public class BeerClicker : MonoBehaviour
 
         ChronoText.gameObject.SetActive(true); // Affiche le chrono
 
-        for (int i = 0; i < max; i++) // Boucle pendant la durée du bonus
+        for (int i = 0; i < max; i++) // Boucle pendant la durÃ©e du bonus
         {
 
-            // Affiche le chrono en rouge pendant les 5 dernières secondes
+            // Affiche le chrono en rouge pendant les 5 derniÃ¨res secondes
             if (BonusDuration <= max / 4)
             {
                 ChronoText.text = "<color=#FF0000>" + string.Format("00:{0:D2}", BonusDuration) + "</color>";
@@ -354,7 +366,7 @@ public class BeerClicker : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1); // Attendre 1 seconde
-            OnMouseDown(); // Incrémente le compteur de bières
+           OnMouseDown(); // IncrÃ©mente le compteur de biÃ¨res
             BonusDuration--;
         }
 
@@ -374,6 +386,44 @@ public class BeerClicker : MonoBehaviour
             return (number / 1000f).ToString("0.##") + "K";
         else
             return number.ToString();
+    }
+
+    private void GetFunnyMessage(int beers)
+    {
+        Debug.Log("Valeur de beers : " + beers); // VÃ©rifie la valeur de beers
+
+        switch (beers)
+        {
+            case 5:
+                Debug.Log("Message pour 128 biÃ¨res");
+                FunnyMessage.text = "C'est dingue ! Tu as bu plus de biÃ¨re qu'un Czech Republicâ€¯ en un an !";
+                StartCoroutine(showmessage());
+                break;
+            case 10:
+                Debug.Log("Message pour 108 biÃ¨res");
+                FunnyMessage.text = "Whaou ! Tu as bu plus de biÃ¨re qu'un Australienâ€¯ en un an !";
+                StartCoroutine(showmessage());
+                break;
+            case 15:
+                Debug.Log("Message pour 108 biÃ¨res");
+                FunnyMessage.text = "Vous avez-bu plus de biÃ¨re qu'un Roumainâ€¯ en un an !";
+                StartCoroutine(showmessage());
+                break;
+            case 20:
+                Debug.Log("Message pour 99 biÃ¨res");
+                FunnyMessage.text = "Vous avez-bu plus de biÃ¨re qu'un Allemandâ€¯ en un an !";
+                StartCoroutine(showmessage());
+                break;
+            default:
+                break;
+        }
+    }
+
+    public IEnumerator showmessage()
+    {
+        MessagePanel.gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        MessagePanel.gameObject.SetActive(false);
     }
 
 }

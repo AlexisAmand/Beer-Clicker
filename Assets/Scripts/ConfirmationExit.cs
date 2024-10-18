@@ -29,6 +29,6 @@ public class ConfirmationExit : MonoBehaviour
         isConfirmationWindowActive = false;
 
         // Charger la scène après avoir mis à jour l'état
-        SceneManager.LoadScene("MainScene");
+        // SceneManager.LoadScene("MainScene");
     }
 }
