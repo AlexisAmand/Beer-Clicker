@@ -1,68 +1,160 @@
 {
     "messages": [
         {
+            "key": "1000000",
+            "value": "L'Oktoberfest à Munich, en Allemagne, est le plus grand festival de bière au monde, attirant des millions de visiteurs chaque année."
+        },
+        {
+            "key": "7800",
+            "value": "En 2011, à Munich, en Allemagne, un groupe de brasseurs a produit la plus grande bière au monde, avec une capacité de 7,8 tonnes, soit environ 7800 Litres"
+        },
+        {
+            "key": "2000",
+            "value": "François Monin, un Français, a réussi en 2014 à ouvrir 2 000 bouteilles de bières en moins de 25 minutes."
+        },
+        {
             "key": "1886",
             "value": "Wow! You've drunk more beer than a Czech during ten years!"
         },
         {
             "key": "1013",
-            "value": "autrichien"
+            "value": "autrichien - 10 ans"
         },
         {
             "key": "996",
-            "value": "polonais"
+            "value": "polonais - 10 ans"
         },
         {
             "key": "993",
-            "value": "irlande"
+            "value": "irlande - 10 ans"
         },
         {
             "key": "976",
-            "value": "Lituanie"
+            "value": "Lituanie - 10 ans"
         },
         {
             "key": "951",
-            "value": "Espagnol"
+            "value": "Espagnol - 10 ans"
         },
         {
             "key": "933",
-            "value": "Allemagne"
+            "value": "Allemagne - 10 ans"
         },
         {
             "key": "931",
-            "value": "Estonie"
+            "value": "Estonie - 10 ans"
         },
         {
             "key": "916",
-            "value": "Roumanie"
+            "value": "Roumanie - 10 ans"
         },
         {
             "key": "908",
-            "value": "Namibie"
+            "value": "Namibie - 10 ans"
         },
         {
             "key": "900",
-            "value": "Croatie"
+            "value": "Croatie - 10 ans"
         },
         {
             "key": "860",
-            "value": "Lettonie"
+            "value": "Lettonie - 10 ans"
         },
         {
             "key": "839",
-            "value": "Slov�nie"
+            "value": "Slovénie - 10 ans"
         },
         {
             "key": "825",
-            "value": "Gabon"
+            "value": "Gabon - 10 ans"
         },
         {
             "key": "804",
-            "value": "Bulgarie"
+            "value": "Bulgarie - 10 ans"
         },
         {
             "key": "799",
-            "value": "Slovaquie"
+            "value": "Slovaquie - 10 ans"
+        },
+        {
+            "key": "790",
+            "value": "Panama - 10 ans"
+        },
+        {
+            "key": "778",
+            "value": "Hongrie - 10 ans"
+        },
+        {
+            "key": "759",
+            "value": "Mexique - 10 ans"
+        },
+        {
+            "key": "768",
+            "value": "la Weihenstephan Abbey, située dans le district de Freising en Allemagne, brasse de la bière depuis l’an 768."
+        },
+        {
+            "key": "723",
+            "value": "Bosnie-Herzégovine - 10 ans"
+        },
+        {
+            "key": "722",
+            "value": "Cambodge - 10 ans"
+        },
+        {
+            "key": "706",
+            "value": "Australie - 10 ans"
+        },
+        {
+            "key": "702",
+            "value": "Finlande - 10 ans"
+        },
+        {
+            "key": "693",
+            "value": "Brésil - 10 ans"
+        },
+        {
+            "key": "690",
+            "value": "Afrique du Sud - 10 ans"
+        },
+        {
+            "key": "670",
+            "value": "Royaume-Uni - 10 ans"
+        },
+        {
+            "key": "667",
+            "value": "Porto-Rico - 10 ans"
+        },
+        {
+            "key": "635",
+            "value": "Portugal - 10 ans"
+        },
+        {
+            "key": "626",
+            "value": "Danemark - 10 ans"
+        },
+        {
+            "key": "360",
+            "value": "La ville de La Crosse dans le Wisconsin comporte plus de 360 bars, principalement dans la même rue."
+        },
+        {
+            "key": "216",
+            "value": "La plus grande chope de bière jamais fabriquée mesurait 2,16 mètres de haut et a été réalisée en 2012 en Allemagne."
+        },
+        {
+            "key": "68",
+            "value": "Murali KC a réussi à décapsuler pas moins de 68 bières avec ses dents en une minute."
+        },
+        {
+            "key": "65",
+            "value": "La bière écossaise, la Snake Venom, est la bière la plus forte du monde avec un taux de 65% d’alcool."
+        },
+        {
+            "key": "25",
+            "value": "Oliver Strümpfel est un serveur capable de porter 25 pintes en une seule fois."
+        },
+        {
+            "key": "13",
+            "value": "l'’alcoolémie d’un Polonais a été mesuré à 13,74 g d’alcool par litre de sang."
         },
         {
             "key": "5",
