@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
             string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
             specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
 
-            foundText.text = "Special beers found : " + specialBeersCollected.Count +" / " + lineNumber;
+            foundText.text = "Bières spéciales trouvées : " + specialBeersCollected.Count +" / " + lineNumber;
 
             BoxCollider collider = boxColliderObject.GetComponent<BoxCollider>();
 
@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour
 
         public void UpdateInventoryText(List<string> beerList)
             {
-                inventoryText.text = "Special Beers:\n";
+                inventoryText.text = "Bières spéciales:\n";
 
                 foreach (string beer in beerList)
                 {
@@ -101,7 +101,7 @@ public class Inventory : MonoBehaviour
         //string filePath = Application.dataPath + "/beers.txt";
         string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
         lineNumber = File.ReadAllLines(filePath).Length;
-        foundText.text = "Special beers found : 0 / " + lineNumber;
+        foundText.text = "Bières spéciales trouvées : 0 / " + lineNumber;
 
     }
 

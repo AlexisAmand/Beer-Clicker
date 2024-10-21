@@ -14,7 +14,5 @@ public class ScreenshotTaker : MonoBehaviour
             ScreenCapture.CaptureScreenshot(filePath);
         }
     }
-
-
-  
+    
 }
