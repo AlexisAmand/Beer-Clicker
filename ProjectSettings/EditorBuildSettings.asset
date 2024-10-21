@@ -12,6 +12,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene01.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/ChallengeMenu.unity
+    guid: 7bb6cc9c8b14b49489ff0dbf24a6a3e6
+  - enabled: 1
+    path: Assets/Scenes/ChallengeScene.unity
+    guid: aeeb751e53d9fe2448cc59e3d210056a
+  - enabled: 1
+    path: Assets/Scenes/OptionsScene.unity
+    guid: f1fe4defefe7b9143b2081dc775940cd
+  - enabled: 1
     path: Assets/Scenes/HelpScene.unity
     guid: 4d02b5fdd9e230d43b13e8a1ebca5211
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

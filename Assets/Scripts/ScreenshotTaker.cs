@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScreenshotTaker : MonoBehaviour
 {
     public string screenshotFileName = "screenshot";
+    public string sceneToLoad;
 
     void Update()
     {
@@ -14,5 +16,19 @@ public class ScreenshotTaker : MonoBehaviour
             ScreenCapture.CaptureScreenshot(filePath);
         }
     }
-    
+
+    // Fonction pour retourner à l'écran principal
+    public void LoadScene()
+    {
+        Debug.Log("Chargement de la scène : " + sceneToLoad);
+        if (!string.IsNullOrEmpty(sceneToLoad))
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        else
+        {
+            Debug.LogError("Le nom de la scène est vide ou invalide !");
+        }
+    }
+
 }

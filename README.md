@@ -25,7 +25,7 @@ I used AI to generate images, such as background, icons or pnj.
 * Windows 11
 * Visual Studio 17.11.5
 * Visual Studio Code 1.93.1
-* Unity 2021.3.31f1
+* Unity 6000.0.23f1
 * Gimp 2.10.38
 
 ## Did you find this page useful ?

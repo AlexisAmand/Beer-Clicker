@@ -1,0 +1,2917 @@
+fileFormatVersion: 2
+guid: 59855308b6947de4b8e77d4a26b74519
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1285716571115358611
+    second: kf_prompts_kb_1024_0
+  - first:
+      213: -3608026001878942804
+    second: kf_prompts_kb_1024_1
+  - first:
+      213: 3752326584494541199
+    second: kf_prompts_kb_1024_2
+  - first:
+      213: 4482920765222941199
+    second: kf_prompts_kb_1024_3
+  - first:
+      213: -3218453144269882545
+    second: kf_prompts_kb_1024_4
+  - first:
+      213: 4875469538021778153
+    second: kf_prompts_kb_1024_5
+  - first:
+      213: 7965714041568321717
+    second: kf_prompts_kb_1024_6
+  - first:
+      213: 6503159413686029237
+    second: kf_prompts_kb_1024_7
+  - first:
+      213: -2047014248520114407
+    second: kf_prompts_kb_1024_8
+  - first:
+      213: 3393569281946460962
+    second: kf_prompts_kb_1024_9
+  - first:
+      213: -4392478039745743400
+    second: kf_prompts_kb_1024_10
+  - first:
+      213: 8302715672302897180
+    second: kf_prompts_kb_1024_11
+  - first:
+      213: -1873336075433474735
+    second: kf_prompts_kb_1024_12
+  - first:
+      213: -6259145732407788172
+    second: kf_prompts_kb_1024_13
+  - first:
+      213: -877672374027728226
+    second: kf_prompts_kb_1024_14
+  - first:
+      213: 4292536564075801635
+    second: kf_prompts_kb_1024_15
+  - first:
+      213: -4465033061773917029
+    second: kf_prompts_kb_1024_16
+  - first:
+      213: 8571299836356029744
+    second: kf_prompts_kb_1024_17
+  - first:
+      213: -2329659938731173063
+    second: kf_prompts_kb_1024_18
+  - first:
+      213: -5640526843936605066
+    second: kf_prompts_kb_1024_19
+  - first:
+      213: -8456174990418062251
+    second: kf_prompts_kb_1024_20
+  - first:
+      213: -733815426076512153
+    second: kf_prompts_kb_1024_21
+  - first:
+      213: -192262842508952499
+    second: kf_prompts_kb_1024_22
+  - first:
+      213: -3425087894827712838
+    second: kf_prompts_kb_1024_23
+  - first:
+      213: -8010252542062603100
+    second: kf_prompts_kb_1024_24
+  - first:
+      213: 1635758863525601771
+    second: kf_prompts_kb_1024_25
+  - first:
+      213: -1287612747822736879
+    second: kf_prompts_kb_1024_26
+  - first:
+      213: -283523240492258448
+    second: kf_prompts_kb_1024_27
+  - first:
+      213: -1250842386488858871
+    second: kf_prompts_kb_1024_28
+  - first:
+      213: 4147255438429730935
+    second: kf_prompts_kb_1024_29
+  - first:
+      213: -8586402621799827877
+    second: kf_prompts_kb_1024_30
+  - first:
+      213: -4784780217477879947
+    second: kf_prompts_kb_1024_31
+  - first:
+      213: 4953318863879770533
+    second: kf_prompts_kb_1024_32
+  - first:
+      213: 1041665531795901291
+    second: kf_prompts_kb_1024_33
+  - first:
+      213: -1804570228965056210
+    second: kf_prompts_kb_1024_34
+  - first:
+      213: -7706461705514926927
+    second: kf_prompts_kb_1024_35
+  - first:
+      213: 4710049925219812905
+    second: kf_prompts_kb_1024_36
+  - first:
+      213: -5180442342004299462
+    second: kf_prompts_kb_1024_37
+  - first:
+      213: -703940768247083083
+    second: kf_prompts_kb_1024_38
+  - first:
+      213: -7549156597428308133
+    second: kf_prompts_kb_1024_39
+  - first:
+      213: -7200311454622572458
+    second: kf_prompts_kb_1024_40
+  - first:
+      213: -7125402738835061599
+    second: kf_prompts_kb_1024_41
+  - first:
+      213: -1880956734825628611
+    second: kf_prompts_kb_1024_42
+  - first:
+      213: -802955851213240274
+    second: kf_prompts_kb_1024_43
+  - first:
+      213: -4655914043280994562
+    second: kf_prompts_kb_1024_44
+  - first:
+      213: -180990473482494455
+    second: kf_prompts_kb_1024_45
+  - first:
+      213: -217983794226552718
+    second: kf_prompts_kb_1024_46
+  - first:
+      213: -2014965760175709606
+    second: kf_prompts_kb_1024_47
+  - first:
+      213: 1062804165595155687
+    second: kf_prompts_kb_1024_48
+  - first:
+      213: 3709623068409220109
+    second: kf_prompts_kb_1024_49
+  - first:
+      213: -5869694775353541688
+    second: kf_prompts_kb_1024_50
+  - first:
+      213: 8873068406191502312
+    second: kf_prompts_kb_1024_51
+  - first:
+      213: -6813509077865164137
+    second: kf_prompts_kb_1024_52
+  - first:
+      213: -2505277929658372175
+    second: kf_prompts_kb_1024_53
+  - first:
+      213: -9046888238516462425
+    second: kf_prompts_kb_1024_54
+  - first:
+      213: -192664399403739075
+    second: kf_prompts_kb_1024_55
+  - first:
+      213: 2128648272101767337
+    second: kf_prompts_kb_1024_56
+  - first:
+      213: 7971470481667960446
+    second: kf_prompts_kb_1024_57
+  - first:
+      213: 3609730310426827164
+    second: kf_prompts_kb_1024_58
+  - first:
+      213: -5794954839933567414
+    second: kf_prompts_kb_1024_59
+  - first:
+      213: 4542115200856150333
+    second: kf_prompts_kb_1024_60
+  - first:
+      213: 6591713531628911533
+    second: kf_prompts_kb_1024_61
+  - first:
+      213: -3699514649653025250
+    second: kf_prompts_kb_1024_62
+  - first:
+      213: -5552611508443613998
+    second: kf_prompts_kb_1024_63
+  - first:
+      213: -3904527081081503300
+    second: kf_prompts_kb_1024_64
+  - first:
+      213: -5580427625747240899
+    second: kf_prompts_kb_1024_65
+  - first:
+      213: -3419945291219728024
+    second: kf_prompts_kb_1024_66
+  - first:
+      213: -7467276242907233937
+    second: kf_prompts_kb_1024_67
+  - first:
+      213: 8842668332636109075
+    second: kf_prompts_kb_1024_68
+  - first:
+      213: -2484819723725444373
+    second: kf_prompts_kb_1024_69
+  - first:
+      213: 4346260176674721954
+    second: kf_prompts_kb_1024_70
+  - first:
+      213: -5110307677727722840
+    second: kf_prompts_kb_1024_71
+  - first:
+      213: -6810100540735493268
+    second: kf_prompts_kb_1024_72
+  - first:
+      213: 6262594151379568905
+    second: kf_prompts_kb_1024_73
+  - first:
+      213: -3232161277246929165
+    second: kf_prompts_kb_1024_74
+  - first:
+      213: -2290974853771014900
+    second: kf_prompts_kb_1024_75
+  - first:
+      213: 7961184500997056354
+    second: kf_prompts_kb_1024_76
+  - first:
+      213: 6406170291149442447
+    second: kf_prompts_kb_1024_77
+  - first:
+      213: -3627140361923399084
+    second: kf_prompts_kb_1024_78
+  - first:
+      213: 3167047290791005728
+    second: kf_prompts_kb_1024_79
+  - first:
+      213: -1650047309047994543
+    second: kf_prompts_kb_1024_80
+  - first:
+      213: -2100214618909567136
+    second: kf_prompts_kb_1024_81
+  - first:
+      213: -1349863220152805617
+    second: kf_prompts_kb_1024_82
+  - first:
+      213: 1683762285480628526
+    second: kf_prompts_kb_1024_83
+  - first:
+      213: 2548960029633366624
+    second: kf_prompts_kb_1024_84
+  - first:
+      213: 8953782418637782910
+    second: kf_prompts_kb_1024_85
+  - first:
+      213: -5845334498778355846
+    second: kf_prompts_kb_1024_86
+  - first:
+      213: 6593078712006516655
+    second: kf_prompts_kb_1024_87
+  - first:
+      213: 4904589900309267787
+    second: kf_prompts_kb_1024_88
+  - first:
+      213: 9144828148845070994
+    second: kf_prompts_kb_1024_89
+  - first:
+      213: -6986779472194032464
+    second: kf_prompts_kb_1024_90
+  - first:
+      213: -48931710304279857
+    second: kf_prompts_kb_1024_91
+  - first:
+      213: -3424108801639015734
+    second: kf_prompts_kb_1024_92
+  - first:
+      213: 7989949716772508806
+    second: kf_prompts_kb_1024_93
+  - first:
+      213: -9036617235254647103
+    second: kf_prompts_kb_1024_94
+  - first:
+      213: -8748724224074383942
+    second: kf_prompts_kb_1024_95
+  - first:
+      213: 7642809229879835181
+    second: kf_prompts_kb_1024_96
+  - first:
+      213: 6377295913644050105
+    second: kf_prompts_kb_1024_97
+  - first:
+      213: -6642666457716492383
+    second: kf_prompts_kb_1024_98
+  - first:
+      213: 2524715078305565681
+    second: kf_prompts_kb_1024_99
+  - first:
+      213: -5614641993818295348
+    second: kf_prompts_kb_1024_100
+  - first:
+      213: -2161206822005100514
+    second: kf_prompts_kb_1024_101
+  - first:
+      213: -6989778248023234759
+    second: kf_prompts_kb_1024_102
+  - first:
+      213: -201718732999394358
+    second: kf_prompts_kb_1024_103
+  - first:
+      213: -6169213028062553510
+    second: kf_prompts_kb_1024_104
+  - first:
+      213: 2637907467089188420
+    second: kf_prompts_kb_1024_105
+  - first:
+      213: 9162055785593140089
+    second: kf_prompts_kb_1024_106
+  - first:
+      213: -1424756862714312125
+    second: kf_prompts_kb_1024_107
+  - first:
+      213: -8099633950887485391
+    second: kf_prompts_kb_1024_108
+  - first:
+      213: 7706253406791755466
+    second: kf_prompts_kb_1024_109
+  - first:
+      213: 2915627691482576261
+    second: kf_prompts_kb_1024_110
+  - first:
+      213: -6192999289854203672
+    second: kf_prompts_kb_1024_111
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 457
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3990a2fc868c7d110800000000000000
+      internalID: 1285716571115358611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cabf1a9a777bdedc0800000000000000
+      internalID: -3608026001878942804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f894d0ed521f21430800000000000000
+      internalID: 3752326584494541199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_3
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f02f5573fa8863e30800000000000000
+      internalID: 4482920765222941199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4bfd89dae1c553d0800000000000000
+      internalID: -3218453144269882545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2a607a6b529a340800000000000000
+      internalID: 4875469538021778153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_6
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0650677b6eb8e60800000000000000
+      internalID: 7965714041568321717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_7
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb4e72180ddf3a50800000000000000
+      internalID: 6503159413686029237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_8
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f9bc2f26b8793e0800000000000000
+      internalID: -2047014248520114407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_9
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223a8133841681f20800000000000000
+      internalID: 3393569281946460962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_10
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d53045ce78ca03c0800000000000000
+      internalID: -4392478039745743400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_11
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18ceae0aeb293370800000000000000
+      internalID: 8302715672302897180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_12
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 453
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1550dd6c3c29006e0800000000000000
+      internalID: -1873336075433474735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 457
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d7e666e1c0329a0800000000000000
+      internalID: -6259145732407788172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 457
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a47ec30a1e1d3f0800000000000000
+      internalID: -877672374027728226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 457
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c2d1f1347229b30800000000000000
+      internalID: 4292536564075801635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94479a46140902c0800000000000000
+      internalID: -4465033061773917029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_17
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d6d59d9cf53f670800000000000000
+      internalID: 8571299836356029744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b5878f0a26bafd0800000000000000
+      internalID: -2329659938731173063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_19
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c7a1168b2d8b1b0800000000000000
+      internalID: -5640526843936605066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_20
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554d69126a1a5aa80800000000000000
+      internalID: -8456174990418062251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760f10602c6f0d5f0800000000000000
+      internalID: -733815426076512153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_22
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c3fb0a6f1f45df0800000000000000
+      internalID: -192262842508952499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_23
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abebd40e4b4a770d0800000000000000
+      internalID: -3425087894827712838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_24
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4503dc0cdd5d090800000000000000
+      internalID: -8010252542062603100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_25
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1e3ae050263b610800000000000000
+      internalID: 1635758863525601771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_26
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ad2c5270b712ee0800000000000000
+      internalID: -1287612747822736879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_27
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b24ec6d19b01cf0800000000000000
+      internalID: -283523240492258448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_28
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 389
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907645b0a7d14aee0800000000000000
+      internalID: -1250842386488858871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_29
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 393
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778396029d20e8930800000000000000
+      internalID: 4147255438429730935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_30
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 393
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b567325ee48f6d880800000000000000
+      internalID: -8586402621799827877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_31
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 393
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5772ae83ebb099db0800000000000000
+      internalID: -4784780217477879947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 329
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a19bcc4349bdb440800000000000000
+      internalID: 4953318863879770533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_33
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b867d384db47e00800000000000000
+      internalID: 1041665531795901291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_34
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21ea4210f0e4f6e0800000000000000
+      internalID: -1804570228965056210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_35
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bcb1afc8e52d0590800000000000000
+      internalID: -7706461705514926927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_36
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926051bb3757d5140800000000000000
+      internalID: 4710049925219812905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_37
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39e079132f5b18b0800000000000000
+      internalID: -5180442342004299462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_38
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bf87b5d9991b36f0800000000000000
+      internalID: -703940768247083083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_39
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b573d7062120c3790800000000000000
+      internalID: -7549156597428308133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_40
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650ab0381ea531c90800000000000000
+      internalID: -7200311454622572458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_41
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4042606fb7d1d90800000000000000
+      internalID: -7125402738835061599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_42
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3cf6deb0df75e5e0800000000000000
+      internalID: -1880956734825628611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_43
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e280d1658e35bd4f0800000000000000
+      internalID: -802955851213240274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_44
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 325
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efecb7188ded26fb0800000000000000
+      internalID: -4655914043280994562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_45
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 329
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90e98509f1efc7df0800000000000000
+      internalID: -180990473482494455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_46
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 329
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270a552e4e099fcf0800000000000000
+      internalID: -217983794226552718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_47
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 329
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52e62e11576904e0800000000000000
+      internalID: -2014965760175709606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 265
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ecca14f1c6dfbe00800000000000000
+      internalID: 1062804165595155687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_49
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c402bb68a3b7330800000000000000
+      internalID: 3709623068409220109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_50
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbf51763b7aa8ea0800000000000000
+      internalID: -5869694775353541688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_51
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e339c234b8732b70800000000000000
+      internalID: 8873068406191502312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_52
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79292fbd79d8171a0800000000000000
+      internalID: -6813509077865164137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_53
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf261b1ff67b3dd0800000000000000
+      internalID: -2505277929658372175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_54
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac119c541ff27280800000000000000
+      internalID: -9046888238516462425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_55
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d381da0efb4835df0800000000000000
+      internalID: -192664399403739075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_56
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8ff5e435a7a8d10800000000000000
+      internalID: 2128648272101767337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_57
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ea45d1b2a50ae60800000000000000
+      internalID: 7971470481667960446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_58
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9993f79796581230800000000000000
+      internalID: 3609730310426827164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_59
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e345ca64f249fa0800000000000000
+      internalID: -5794954839933567414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_60
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 265
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31dee3c5b5d80f30800000000000000
+      internalID: 4542115200856150333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_61
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 261
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab70e958887a7b50800000000000000
+      internalID: 6591713531628911533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_62
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 265
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16e31ae60fa8acc0800000000000000
+      internalID: -3699514649653025250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_63
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 265
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4f877804921f2b0800000000000000
+      internalID: -5552611508443613998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb18e3c8e4550d9c0800000000000000
+      internalID: -3904527081081503300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_65
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d382f8804a65e82b0800000000000000
+      internalID: -5580427625747240899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_66
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869049590e9e980d0800000000000000
+      internalID: -3419945291219728024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_67
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f610dc502d7ee5890800000000000000
+      internalID: -7467276242907233937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_68
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319fe518ff777ba70800000000000000
+      internalID: 8842668332636109075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_69
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beae57c50a5248dd0800000000000000
+      internalID: -2484819723725444373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_70
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a09f1c6a94015c30800000000000000
+      internalID: 4346260176674721954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_71
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a276102e3a8419b0800000000000000
+      internalID: -5110307677727722840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_72
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6be3c0c3a9ad71a0800000000000000
+      internalID: -6810100540735493268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_73
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9090b65333439e650800000000000000
+      internalID: 6262594151379568905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_74
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f68cec617e0523d0800000000000000
+      internalID: -3232161277246929165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_75
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 201
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d40a33282d430e0800000000000000
+      internalID: -2290974853771014900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_76
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 201
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267664d9f1fcb7e60800000000000000
+      internalID: 7961184500997056354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_77
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d8f9e30f947e850800000000000000
+      internalID: 6406170291149442447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_78
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 452f219ee0fc9adc0800000000000000
+      internalID: -3627140361923399084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_79
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 197
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e06723bbc93fb20800000000000000
+      internalID: 3167047290791005728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157ea99f6bad919e0800000000000000
+      internalID: -1650047309047994543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_81
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06710d77ee98ad2e0800000000000000
+      internalID: -2100214618909567136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_82
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f075d6b9d82544de0800000000000000
+      internalID: -1349863220152805617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_83
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21d540b0eced5710800000000000000
+      internalID: 1683762285480628526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_84
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a47f854a9bf5320800000000000000
+      internalID: 2548960029633366624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_85
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ffa0baba9324c70800000000000000
+      internalID: 8953782418637782910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_86
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77eaf64e3331eea0800000000000000
+      internalID: -5845334498778355846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_87
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 137
+        width: 64
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf965d28225f7b50800000000000000
+      internalID: 6593078712006516655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_88
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 133
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4507e8578a901440800000000000000
+      internalID: 4904589900309267787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_89
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 133
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a47efffb4f8ee70800000000000000
+      internalID: 9144828148845070994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_90
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 133
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc22eb6619f90f90800000000000000
+      internalID: -6986779472194032464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_91
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 133
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2af056ed8225ff0800000000000000
+      internalID: -48931710304279857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_92
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 133
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca9406cf2f1b70d0800000000000000
+      internalID: -3424108801639015734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_93
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 133
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68455715fe002ee60800000000000000
+      internalID: 7989949716772508806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_94
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 128
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c66979a08c779280800000000000000
+      internalID: -9036617235254647103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_95
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 69
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdf032cba9469680800000000000000
+      internalID: -8748724224074383942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_96
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 69
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a70115086b01a60800000000000000
+      internalID: 7642809229879835181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_97
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 69
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6cd4858d4b08850800000000000000
+      internalID: 6377295913644050105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_98
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 64
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7f7621d0280d3a0800000000000000
+      internalID: -6642666457716492383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_99
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbc979bcf6990320800000000000000
+      internalID: 2524715078305565681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_100
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc33871bad8c412b0800000000000000
+      internalID: -5614641993818295348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_101
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e103c3098d9d102e0800000000000000
+      internalID: -2161206822005100514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_102
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937a2d387b15ffe90800000000000000
+      internalID: -6989778248023234759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_103
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb770f81e9533df0800000000000000
+      internalID: -201718732999394358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_104
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a9e96df6d826aa0800000000000000
+      internalID: -6169213028062553510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_105
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44693367ddabb9420800000000000000
+      internalID: 2637907467089188420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_106
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 46
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9737790c139262f70800000000000000
+      internalID: 9162055785593140089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_107
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 5
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a0d9a9e2f3a3ce0800000000000000
+      internalID: -1424756862714312125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_108
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 5
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13068aad5d1589f80800000000000000
+      internalID: -8099633950887485391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_109
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 5
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac667fcd4ac12fa60800000000000000
+      internalID: 7706253406791755466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_110
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 5
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5857c1010f3667820800000000000000
+      internalID: 2915627691482576261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kf_prompts_kb_1024_111
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 5
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e86ef135fb0e0aa0800000000000000
+      internalID: -6192999289854203672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
