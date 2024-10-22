@@ -9,7 +9,7 @@ For fun, I started developing a clicker game centered around beers. It's simply 
 
 I hope you enjoy it !  
 
-## my use of AI
+## My use of AI
 
 I used AI to generate images, such as background, icons or pnj.
 

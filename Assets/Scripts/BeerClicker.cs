@@ -66,7 +66,7 @@ public class BeerClicker : MonoBehaviour
         // Récupérer la liste des bières spéciales
         string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
         specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
-        FindObjectOfType<Inventory>().UpdateInventoryText(specialBeersCollected);
+        FindFirstObjectByType<Inventory>().UpdateInventoryText(specialBeersCollected);
 
         // On vide le text des bonus
         BonusText.text = "";
@@ -158,7 +158,7 @@ public class BeerClicker : MonoBehaviour
         {
             int randomIndex = UnityEngine.Random.Range(0, specialBeers.Count);
             string specialBeer = specialBeers[randomIndex];
-            FindObjectOfType<Inventory>().AddSpecialBeer(specialBeer);
+            FindFirstObjectByType<Inventory>().AddSpecialBeer(specialBeer);
             StartCoroutine(ShowSpecialBeerMessage(specialBeer)); // Lance la coroutine pour afficher le message
             PlayerPrefs.Save(); // Sauvegarde l'inventaire
         }
