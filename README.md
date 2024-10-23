@@ -20,6 +20,13 @@ I used AI to generate images, such as background, icons or pnj.
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-03.png)
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-04.png)
 
+If you're lucky, you might find a special beer that gives you a mahjong piece to collect in your inventory! 
+
+Can you collect them all?  
+(Under development...)
+
+![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-05.png)
+
 ##  My config
 
 * Windows 11

@@ -4,105 +4,110 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 
-// Ce script gére l'inventaire
-
 public class Inventory : MonoBehaviour
-    {
-        public GameObject inventoryPanel; // Le panel qui s'affiche/masque
-        public Text inventoryText; // Le texte où s'affichent les bières spéciales
-        public TextMeshProUGUI foundText; // Le texte où s'affichent les bières spéciales trouvées / à trouver
-        private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
-        public GameObject boxColliderObject; // Référence au GameObject avec le BoxCollider
-        private bool isActive;
-        private int lineNumber;
+{
+    public GameObject inventoryPanel; // Le panel qui s'affiche/masque
+    public GameObject beerImagePrefab; // Prefab d'image pour les bières
+    public Transform inventoryContent; // Conteneur pour les images dans le Scroll Rect
+    public TextMeshProUGUI foundText; // Texte pour les bières trouvées / à trouver
+    private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
+    public GameObject boxColliderObject; // Référence au GameObject avec le BoxCollider
+    private bool isActive;
+    private int lineNumber;
 
     private void Start()
-        {
-            inventoryPanel.SetActive(false); // Cache le panel au démarrage d'une partie
-            LoadInventory(); // Charge les bières sauvegardées
-        }
+    {
+        inventoryPanel.SetActive(false); // Cache le panel au démarrage d'une partie
+        LoadInventory(); // Charge les bières sauvegardées
 
-        private void Update()
+        Sprite loadedSprite = Resources.Load<Sprite>("Images/beertest");
+        if (loadedSprite != null)
         {
-            // Récupération du nombre de lignes du fichier qui contient les bières à collectionner
-            // string filePath = Application.dataPath + "/beers.txt";
+            Debug.Log("Sprite loaded successfully!");
+        }
+        else
+        {
+            Debug.Log("Failed to load sprite.");
+        }
+    }
+
+    private void Update()
+    {
         string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
         lineNumber = File.ReadAllLines(filePath).Length;
 
-            // Récupération du nombre de bières déjà trouvées
-            string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
-            specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
+        string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
+        specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
 
-            foundText.text = "Bières spéciales trouvées : " + specialBeersCollected.Count +" / " + lineNumber;
+        foundText.text = "Bières spéciales trouvées : " + specialBeersCollected.Count + " / " + lineNumber;
 
-            BoxCollider collider = boxColliderObject.GetComponent<BoxCollider>();
+        BoxCollider collider = boxColliderObject.GetComponent<BoxCollider>();
+        collider.enabled = !isActive; // Simplification de la gestion du collider
+    }
 
-            
-                if (isActive)
-                {
-
-                    collider.enabled = false;
-                }
-                else
-                {
-
-                    collider.enabled = true;
-                }
-            
-
-        }
-
-    // Cette fonction affiche/masque l'inventaire
     public void ToggleInventory()
+    {
+        isActive = !inventoryPanel.activeSelf;
+        inventoryPanel.SetActive(isActive);
+        if (isActive) UpdateInventoryImages(); // Met à jour les images si l'inventaire est ouvert
+    }
+
+    public void AddSpecialBeer(string beerName)
+    {
+        if (!specialBeersCollected.Contains(beerName))
         {
-            isActive = !inventoryPanel.activeSelf;
-            inventoryPanel.SetActive(isActive);
-        }    
+            Debug.Log("Trouvée: " + beerName);
+            specialBeersCollected.Add(beerName);
+            PlayerPrefs.SetString("specialBeersCollected", string.Join(",", specialBeersCollected));
+            PlayerPrefs.Save();
+            UpdateInventoryImages(); // Met à jour l'affichage des images
+        }
+    }
 
-        // Ajoute une bière spéciale à la liste, vérifie les doublons, et sauvegarde la liste mise à jour.
+    // Met à jour l'affichage des images dans l'inventaire
 
-        public void AddSpecialBeer(string beerName)
-            {
-                // Vérifie si la bière n'est pas déjà dans l'inventaire
-                if (!specialBeersCollected.Contains(beerName))
-                {
-                    specialBeersCollected.Add(beerName);
-                    UpdateInventoryText(specialBeersCollected); // Met à jour le texte de l'inventaire
 
-                    // Sauvegarde la liste des bières spéciales
-                    PlayerPrefs.SetString("specialBeersCollected", string.Join(",", specialBeersCollected));
-                    PlayerPrefs.Save();
-                }
-            }
-
-        // Met à jour le texte de l'inventaire pour afficher les bières collectées.
-
-        public void UpdateInventoryText(List<string> beerList)
-            {
-                inventoryText.text = "Bières spéciales:\n";
-
-                foreach (string beer in beerList)
-                {
-                    inventoryText.text += beer + "\n";
-                }
-            }
-
-        // Cette méthode charge les bières sauvegardées depuis PlayerPrefs et met à jour l'affichage.
-        public void LoadInventory()
+    public void UpdateInventoryImages()
+    {
+        // Supprime tous les enfants existants
+        foreach (Transform child in inventoryContent)
         {
-            string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
-            if (!string.IsNullOrEmpty(savedBeers))
-            {
-                specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
-                UpdateInventoryText(specialBeersCollected); // Met à jour le texte de l'inventaire avec les bières chargées
-            }
+            Destroy(child.gameObject);
+        }
 
-        // Récupération du nombre de lignes du fichier qui contient les bières à collectionner
-        //string filePath = Application.dataPath + "/beers.txt";
-        string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
-        lineNumber = File.ReadAllLines(filePath).Length;
-        foundText.text = "Bières spéciales trouvées : 0 / " + lineNumber;
+        // Instancie les nouvelles images
+        foreach (string beerName in specialBeersCollected)
+        {
+            GameObject beerImageObject = Instantiate(beerImagePrefab, inventoryContent);
+
+            // Configure l'image (assurez-vous que l'image est correctement assignée)
+            Image beerImage = beerImageObject.GetComponent<Image>();
+            Sprite loadedSprite = Resources.Load<Sprite>("Images/" + beerName); // Assure-toi que le chemin est correct
+
+            //Sprite loadedSprite = Resources.Load<Sprite>("Images/beertest"); // Assure-toi que le chemin est correct
+
+            beerImage.sprite = loadedSprite; // Assignez ici le sprite correspondant à beerName;
+
+            // Assigne le parent et réinitialise la position locale
+            beerImageObject.transform.SetParent(inventoryContent, false); // 'false' pour garder l'échelle et la position locale
+        }
+
+        // Réajuste le contenu
+        LayoutRebuilder.ForceRebuildLayoutImmediate(inventoryContent.GetComponent<RectTransform>());
 
     }
 
+    public void LoadInventory()
+    {
+        string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
+        if (!string.IsNullOrEmpty(savedBeers))
+        {
+            specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
+            UpdateInventoryImages(); // Met à jour l'affichage avec les bières chargées
+        }
+
+        string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
+        lineNumber = File.ReadAllLines(filePath).Length;
+        foundText.text = "Bières spéciales trouvées : 0 / " + lineNumber;
+    }
 }

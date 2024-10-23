@@ -66,7 +66,8 @@ public class BeerClicker : MonoBehaviour
         // Récupérer la liste des bières spéciales
         string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
         specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
-        FindFirstObjectByType<Inventory>().UpdateInventoryText(specialBeersCollected);
+        // FindFirstObjectByType<Inventory>().UpdateInventoryText(specialBeersCollected);
+        FindFirstObjectByType<Inventory>().UpdateInventoryImages();
 
         // On vide le text des bonus
         BonusText.text = "";
