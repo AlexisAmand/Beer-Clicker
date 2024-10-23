@@ -16,7 +16,13 @@ I used AI to generate images, such as background, icons or pnj.
 ## Screenshots
 
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-01.png)
+
+This game is a clicker. Your mission, if you accept it, is simply to.... click on the screen. Each click is a beer that's drunk.
+
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-02.png)
+
+Sometimes people will come up to you and talk to you. Feel free to read them to find out more about the world of beer.
+
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-03.png)
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-04.png)
 
