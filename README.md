@@ -21,7 +21,7 @@ This game is a clicker. Your mission, if you accept it, is simply to.... click o
 
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-02.png)
 
-Sometimes people will come up to you and talk to you. Feel free to read them to find out more about the world of beer.
+Sometimes, people will come up to you and talk to you. Feel free to read them to find out more about the world of beer.
 
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-03.png)
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-04.png)

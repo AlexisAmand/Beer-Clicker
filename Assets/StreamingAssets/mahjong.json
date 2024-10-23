@@ -1,0 +1,12 @@
+{
+    "messages": [
+        {
+            "name": "Beer-ific",
+            "description": "A beer with tentacles!",
+        },
+        {
+            "name": "Beer-arium",
+            "description": "An aquarium of beer.",
+        }
+    ]
+}
