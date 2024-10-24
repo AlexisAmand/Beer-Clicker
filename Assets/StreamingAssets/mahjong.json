@@ -1,12 +1,52 @@
 {
     "messages": [
         {
-            "name": "Beer-ific",
-            "description": "A beer with tentacles!",
+            "name": "Beer-illiant",
+            "description": "A beer named Beer-illiant"
         },
         {
+            "name": "Beer-rito",
+            "description": "A beer named Beer-rito"
+        }
+        ,
+        {
+            "name": "Beer-thday",
+            "description": "A beer named Beer-thday"
+        }
+        ,
+        {
+            "name": "Beer-opoly",
+            "description": "A beer named Beer-opoly"
+        }
+        ,
+        {
+            "name": "Beer-nanza",
+            "description": "A beer named Beer-nanza"
+        }
+        ,
+        {
+            "name": "Beer-becue",
+            "description": "A beer named Beer-becue"
+        }
+        ,
+        {
+            "name": "Beer-gamote",
+            "description": "A beer named Beer-gamote"
+        }
+        ,
+        {
+            "name": "Beer-ific",
+            "description": "A beer named Beer-ific"
+        }
+        ,
+        {
             "name": "Beer-arium",
-            "description": "An aquarium of beer.",
+            "description": "A beer named Beer-arium"
+        }
+        ,
+        {
+            "name": "Beer-ology",
+            "description": "A beer named Beer-ology"
         }
     ]
 }

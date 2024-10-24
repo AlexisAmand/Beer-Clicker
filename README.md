@@ -15,6 +15,8 @@ I used AI to generate images, such as background, icons or pnj.
 
 ## Screenshots
 
+The story takes place in the tavern of a small village somewhere in Asia.
+
 ![ScreenShot](https://github.com/AlexisAmand/Beer-Clicker/blob/main/screenshots/beer-01.png)
 
 This game is a clicker. Your mission, if you accept it, is simply to.... click on the screen. Each click is a beer that's drunk.
