@@ -6,7 +6,18 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+[System.Serializable]
+public class Mahjong
+{
+    public string name;
+    public string description;
+}
 
+[System.Serializable]
+public class MahjongData
+{
+    public List<Mahjong> mahjong;
+}
 public class BeerClicker : MonoBehaviour
 {
     public int beersCollected; // Compteur de bières collectées
@@ -48,6 +59,7 @@ public class BeerClicker : MonoBehaviour
     private int beerAmount = 1;
 
     private MessageData messageData;
+    private MahjongData mahjongData;
 
     private void Start()
     {
@@ -55,8 +67,32 @@ public class BeerClicker : MonoBehaviour
         MessagePanel.gameObject.SetActive(false);
 
         // récupération de la liste des bières spéciales
-        //string filePath = Application.dataPath + "/beers.txt";
-        string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
+        // string filePath = Application.dataPath + "/beers.txt";
+        // string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
+        string filePath = Path.Combine(Application.streamingAssetsPath, "mahjong.json");
+
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            Debug.Log("Contenu du JSON : " + json); // Pour vérifier le contenu
+
+            // Désérialisation avec JsonUtility
+            mahjongData = JsonUtility.FromJson<MahjongData>(json);
+
+            if (mahjongData != null && mahjongData.mahjong != null)
+            {
+                Debug.Log("JSON chargé correctement !");
+            }
+            else
+            {
+                Debug.LogError("mahjongData ou mahjongeData.mahjongs est null.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Le fichier JSON n'existe pas à ce chemin.");
+        }
+
         LoadBeerNamesFromFile(filePath);
 
         // Récupérer le nombre de bières bues si le jeu a été relancé
@@ -223,11 +259,24 @@ public class BeerClicker : MonoBehaviour
     // Charge les noms de bières depuis le fichier et remplit la liste
     public void LoadBeerNamesFromFile(string filePath)
     {
+        // version avec beers.text
+
+        /*
         if (File.Exists(filePath))
         {
             string[] beersFromFile = File.ReadAllLines(filePath);
             specialBeers.AddRange(beersFromFile); // Remplis la liste avec les lignes du fichier
         }
+        */
+
+        foreach (Mahjong msg in mahjongData.mahjong)
+        {
+            Debug.Log(msg.name);
+            // string[] beersFromFile = File.ReadAllLines(filePath);
+            specialBeers.Add(msg.name); // Remplis la liste avec les lignes du fichier
+
+        }
+
     }
 
     public void Bonus1()

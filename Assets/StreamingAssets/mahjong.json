@@ -1,52 +1,97 @@
 {
-    "messages": [
+    "mahjong": [
         {
             "name": "Beer-illiant",
-            "description": "A beer named Beer-illiant"
+            "description": "La description pour la beer appelée Beer-illiant"
         },
         {
             "name": "Beer-rito",
-            "description": "A beer named Beer-rito"
+            "description": "La description pour la beer appelée Beer-rito"
         }
         ,
         {
             "name": "Beer-thday",
-            "description": "A beer named Beer-thday"
+            "description": "Parfois, je pense que je vais avoir besoin de mettre une description un peu longue, car je vais avoir plein de choses à raconter. Elles ne seront pas toujours bien écrites."
         }
         ,
         {
             "name": "Beer-opoly",
-            "description": "A beer named Beer-opoly"
+            "description": "La description pour la beer appelée Beer-opoly"
         }
         ,
         {
             "name": "Beer-nanza",
-            "description": "A beer named Beer-nanza"
+            "description": "La description pour la beer appelée Beer-nanza"
         }
         ,
         {
             "name": "Beer-becue",
-            "description": "A beer named Beer-becue"
+            "description": "La description pour la beer appelée Beer-becue"
         }
         ,
         {
             "name": "Beer-gamote",
-            "description": "A beer named Beer-gamote"
+            "description": "La description pour la beer appelée Beer-gamote"
         }
         ,
         {
             "name": "Beer-ific",
-            "description": "A beer named Beer-ific"
+            "description": "La description pour la beer appelée Beer-ific"
         }
         ,
         {
             "name": "Beer-arium",
-            "description": "A beer named Beer-arium"
+            "description": "La description pour la beer appelée Beer-arium"
+        }
+        ,
+        {
+            "name": "Cheers-to-Beer",
+            "description": "La description pour la beer appelée Cheers-to-Beer"
         }
         ,
         {
             "name": "Beer-ology",
-            "description": "A beer named Beer-ology"
+            "description": "La description pour la beer appelée Beer-ology"
+        }
+        ,
+        {
+            "name": "Beer-ocity",
+            "description": "La description pour la beer appelée Beer-ocity"
+        }
+        ,
+        {
+            "name": "Beer-lin",
+            "description": "La description pour la beer appelée Beer-lin"
+        }
+        ,
+        {
+            "name": "Beer-y",
+            "description": "La description pour la beer appelée Beer-y"
+        }
+        ,
+        {
+            "name": "Beer-shop",
+            "description": "La description pour la beer appelée Beer-shop"
+        }
+        ,
+        {
+            "name": "Beer-maid",
+            "description": "La description pour la beer appelée Beer-maid"
+        }
+        ,
+        {
+            "name": "Beer-tender",
+            "description": "La description pour la beer appelée Beer-tender"
+        }
+        ,
+        {
+            "name": "Beer-acle ",
+            "description": "La description pour la beer appelée Beer-acle"
+        }
+        ,
+        {
+            "name": "Beer-mazing",
+            "description": "La description pour la beer appelée Beer-mazing"
         }
     ]
 }

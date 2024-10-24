@@ -15,6 +15,9 @@ public class Inventory : MonoBehaviour
     private bool isActive;
     private int lineNumber;
 
+    private MessageData messageData;
+    private MahjongData mahjongData;
+
     private void Start()
     {
         inventoryPanel.SetActive(false); // Cache le panel au démarrage d'une partie
@@ -33,8 +36,14 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
-        lineNumber = File.ReadAllLines(filePath).Length;
+        // string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
+        // lineNumber = File.ReadAllLines(filePath).Length;
+
+        string filePath = Path.Combine(Application.streamingAssetsPath, "mahjong.json");
+        string json = File.ReadAllText(filePath);
+
+        mahjongData = JsonUtility.FromJson<MahjongData>(json);
+        lineNumber = mahjongData.mahjong.Count;
 
         string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
         specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
