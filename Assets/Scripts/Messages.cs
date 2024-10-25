@@ -71,7 +71,7 @@ public class Messages : MonoBehaviour
 
     private void GetFunnyMessage(int beers)
     {
-        Debug.Log("Valeur de beers : " + beers); // Vérifie la valeur de beers
+        //Debug.Log("Valeur de beers : " + beers); // Vérifie la valeur de beers
 
         // Convertir beers en string
         string beersKey = beers.ToString();
@@ -81,7 +81,7 @@ public class Messages : MonoBehaviour
         {
             if (msg.key == beersKey)
             {
-                Debug.Log("Message trouvé : " + msg.value);
+                //Debug.Log("Message trouvé : " + msg.value);
                 FunnyMessage.text = msg.value; // Assigne le message trouvé
 
                 // Vérifie si le panel n'est pas déjà actif avant de le réafficher
@@ -93,7 +93,7 @@ public class Messages : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("Aucun message trouvé pour " + beers);
+        //Debug.LogWarning("Aucun message trouvé pour " + beers);
     }
 
     public IEnumerator ShowMessage()

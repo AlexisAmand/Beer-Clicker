@@ -24,21 +24,10 @@ public class Inventory : MonoBehaviour
         LoadInventory(); // Charge les bières sauvegardées
 
         Sprite loadedSprite = Resources.Load<Sprite>("Images/beertest");
-        if (loadedSprite != null)
-        {
-            Debug.Log("Sprite loaded successfully!");
-        }
-        else
-        {
-            Debug.Log("Failed to load sprite.");
-        }
     }
 
     private void Update()
     {
-        // string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
-        // lineNumber = File.ReadAllLines(filePath).Length;
-
         string filePath = Path.Combine(Application.streamingAssetsPath, "mahjong.json");
         string json = File.ReadAllText(filePath);
 
@@ -79,23 +68,22 @@ public class Inventory : MonoBehaviour
     public void UpdateInventoryImages()
     {
         // Supprime tous les enfants existants
+        
         foreach (Transform child in inventoryContent)
         {
             Destroy(child.gameObject);
         }
-
+        
         // Instancie les nouvelles images
         foreach (string beerName in specialBeersCollected)
         {
             GameObject beerImageObject = Instantiate(beerImagePrefab, inventoryContent);
 
-            // Configure l'image (assurez-vous que l'image est correctement assignée)
+            // Configure l'image
             Image beerImage = beerImageObject.GetComponent<Image>();
-            Sprite loadedSprite = Resources.Load<Sprite>("Images/" + beerName); // Assure-toi que le chemin est correct
+            Sprite loadedSprite = Resources.Load<Sprite>("Images/" + beerName); // chemin vers les pieces de mahjong
 
-            //Sprite loadedSprite = Resources.Load<Sprite>("Images/beertest"); // Assure-toi que le chemin est correct
-
-            beerImage.sprite = loadedSprite; // Assignez ici le sprite correspondant à beerName;
+            beerImage.sprite = loadedSprite; 
 
             // Assigne le parent et réinitialise la position locale
             beerImageObject.transform.SetParent(inventoryContent, false); // 'false' pour garder l'échelle et la position locale
@@ -115,8 +103,13 @@ public class Inventory : MonoBehaviour
             UpdateInventoryImages(); // Met à jour l'affichage avec les bières chargées
         }
 
-        string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
-        lineNumber = File.ReadAllLines(filePath).Length;
+
+
+
+
+
+        // string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
+        // lineNumber = File.ReadAllLines(filePath).Length;
         foundText.text = "Bières spéciales trouvées : 0 / " + lineNumber;
     }
 }

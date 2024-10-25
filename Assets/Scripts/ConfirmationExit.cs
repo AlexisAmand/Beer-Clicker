@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Ce script gére la fenêtre de confirmation de sortie d'une partie
+
 public class ConfirmationExit : MonoBehaviour
 {
     public GameObject boxColliderObject; // Référence au GameObject avec le BoxCollider
@@ -24,8 +26,5 @@ public class ConfirmationExit : MonoBehaviour
         // Cacher la fenêtre de confirmation
         ExitGame.gameObject.SetActive(false);
         isConfirmationWindowActive = false;
-
-        // Charger la scène après avoir mis à jour l'état
-        // SceneManager.LoadScene("MainScene");
     }
 }

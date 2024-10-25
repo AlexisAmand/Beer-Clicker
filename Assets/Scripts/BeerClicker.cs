@@ -67,8 +67,7 @@ public class BeerClicker : MonoBehaviour
         MessagePanel.gameObject.SetActive(false);
 
         // récupération de la liste des bières spéciales
-        // string filePath = Application.dataPath + "/beers.txt";
-        // string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
+
         string filePath = Path.Combine(Application.streamingAssetsPath, "mahjong.json");
 
         if (File.Exists(filePath))
@@ -102,7 +101,6 @@ public class BeerClicker : MonoBehaviour
         // Récupérer la liste des bières spéciales
         string savedBeers = PlayerPrefs.GetString("specialBeersCollected", "");
         specialBeersCollected = new List<string>(savedBeers.Split(new char[] { ',' }, System.StringSplitOptions.RemoveEmptyEntries));
-        // FindFirstObjectByType<Inventory>().UpdateInventoryText(specialBeersCollected);
         FindFirstObjectByType<Inventory>().UpdateInventoryImages();
 
         // On vide le text des bonus
@@ -120,7 +118,7 @@ public class BeerClicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
         if (beersCollected < CostBonus1)
         {
             buttons[2].interactable = false;
@@ -129,6 +127,15 @@ public class BeerClicker : MonoBehaviour
         {
             buttons[2].interactable = true;
         }
+        */
+
+        /* Bouton du bonus Happy Hour */
+        bool result = (beersCollected < CostBonus1) ? false : true;
+        buttons[2].interactable = result;
+
+
+
+
 
         if (beersCollected < CostBonus2)
         {
@@ -175,8 +182,7 @@ public class BeerClicker : MonoBehaviour
             beerAmount = UnityEngine.Random.Range(0, 15);
         }
 
-        ShowPlusOneEffect(Input.mousePosition, beerAmount);
-        
+        ShowPlusOneEffect(Input.mousePosition, beerAmount);        
     }
 
     private void ShowPlusOneEffect(Vector3 position, int amount)
@@ -195,14 +201,15 @@ public class BeerClicker : MonoBehaviour
         {
             int randomIndex = UnityEngine.Random.Range(0, specialBeers.Count);
             string specialBeer = specialBeers[randomIndex];
+
+            Debug.Log("bière trouvée : " + specialBeer);
+
             FindFirstObjectByType<Inventory>().AddSpecialBeer(specialBeer);
             StartCoroutine(ShowSpecialBeerMessage(specialBeer)); // Lance la coroutine pour afficher le message
             PlayerPrefs.Save(); // Sauvegarde l'inventaire
         }
 
-        // Affiche "+1" à l'endroit du curseur
-        // ShowPlusOneEffect(Input.mousePosition); // a remettre si je restaureDrinkBeer
-
+        // Sauvegarde les données
         PlayerPrefs.SetInt("beersCollected", beersCollected);
         PlayerPrefs.Save(); // Sauvegarde des données
 
@@ -223,7 +230,6 @@ public class BeerClicker : MonoBehaviour
 
     private IEnumerator MovePlusOne(GameObject plusOne)
     {
-
         float duration = 4f; // Durée du mouvement
         float elapsedTime = 0f;
 
@@ -259,22 +265,10 @@ public class BeerClicker : MonoBehaviour
     // Charge les noms de bières depuis le fichier et remplit la liste
     public void LoadBeerNamesFromFile(string filePath)
     {
-        // version avec beers.text
-
-        /*
-        if (File.Exists(filePath))
-        {
-            string[] beersFromFile = File.ReadAllLines(filePath);
-            specialBeers.AddRange(beersFromFile); // Remplis la liste avec les lignes du fichier
-        }
-        */
 
         foreach (Mahjong msg in mahjongData.mahjong)
         {
-            Debug.Log(msg.name);
-            // string[] beersFromFile = File.ReadAllLines(filePath);
             specialBeers.Add(msg.name); // Remplis la liste avec les lignes du fichier
-
         }
 
     }
