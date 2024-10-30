@@ -22,13 +22,13 @@ public class BeerClicker : MonoBehaviour
 {
     public int beersCollected; // Compteur de bières collectées
     public Text beersText; // Référence au texte UI pour le compteur
-    public Text specialBeerText; // Référence au texte UI pour la bière spéciale
+    // public Text specialBeerText; // Référence au texte UI pour la bière spéciale
     private List<string> specialBeers = new List<string>();
     public GameObject plusOnePrefab; // Référence au prefab pour "+1"
 
     public AudioSource clickSound; // Référence au composant AudioSource pour le son de clic
     public AudioSource bonusSound; // Référence au composant AudioSource pour le son de clic sur un bonus
-
+    
     private List<string> specialBeersCollected = new List<string>(); // Liste des bières spéciales collectées
     public string savedBeers;
     
@@ -60,6 +60,14 @@ public class BeerClicker : MonoBehaviour
 
     private MessageData messageData;
     private MahjongData mahjongData;
+
+    public GameObject specialBeerPanel;
+    public TextMeshProUGUI specialBeerText;
+    public GameObject specialBeerImage;
+    public AudioSource specialBeerSound;
+
+    public float shakeMagnitude = 0.1f; // Intensité de chaque déplacement
+    public int shakeCount = 10; // Nombre de secousses
 
     private void Start()
     {
@@ -250,10 +258,17 @@ public class BeerClicker : MonoBehaviour
     // Coroutine pour afficher le message de bière spéciale
     private IEnumerator ShowSpecialBeerMessage(string specialBeer)
     {
-        specialBeerText.text = "You've drunk a " + specialBeer; // Met à jour le texte de la bière spéciale
-        specialBeerText.gameObject.SetActive(true);         
-        yield return new WaitForSeconds(1f); 
-        specialBeerText.gameObject.SetActive(false); // Masque le texte après 3 secondes
+        specialBeerText.text = "You've drunk the " + specialBeer + " !"; // Met à jour le texte de la bière spéciale
+
+        Image imageComponent = specialBeerImage.GetComponent<Image>();
+        imageComponent.sprite = Resources.Load<Sprite>("Images/" + specialBeer);
+
+        specialBeerPanel.SetActive(true); // Affiche le panneau
+        specialBeerSound.Play();
+        // yield return StartCoroutine(ShakeObject(specialBeerPanel));
+        yield return new WaitForSeconds(4f); // Attend 5 secondes
+        specialBeerSound.Stop();
+        specialBeerPanel.SetActive(false); // Masque le panneau
     }
 
     public void LoadMainMenu()
@@ -425,6 +440,23 @@ public class BeerClicker : MonoBehaviour
             return number.ToString();
     }
 
-  
+
+    private IEnumerator ShakeObject(GameObject obj)
+    {
+        Vector3 originalPosition = obj.transform.localPosition;
+
+        for (int i = 0; i < shakeCount; i++)
+        {
+            // Calcul du déplacement aléatoire
+            float xOffset = Random.Range(-shakeMagnitude * 1000f, shakeMagnitude * 1000f);
+            float yOffset = Random.Range(-shakeMagnitude * 1000f, shakeMagnitude * 1000f);
+            obj.transform.localPosition = new Vector3(originalPosition.x + xOffset, originalPosition.y + yOffset, originalPosition.z);
+
+            yield return new WaitForSeconds(0.2f); // Petite pause pour rendre le mouvement visible
+        }
+
+        // Remet l'objet à sa position initiale
+        obj.transform.localPosition = originalPosition;
+    }
 
 }

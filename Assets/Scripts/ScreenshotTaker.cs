@@ -1,10 +1,21 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScreenshotTaker : MonoBehaviour
 {
     public string screenshotFileName = "screenshot";
     public string sceneToLoad;
+
+    // Bouton pour le son
+    public TextMeshProUGUI SoundButtonText;
+    public GameObject SoundButtonImage;
+
+    private void Start()
+    {
+        SoundButtonText.text = "Couper le son";
+    }
 
     void Update()
     {
@@ -31,4 +42,23 @@ public class ScreenshotTaker : MonoBehaviour
         }
     }
 
+    // On coupe le son (ou pas) !
+
+    public void ToggleMute()
+    {
+        AudioListener.pause = !AudioListener.pause;
+        Image imageComponent = SoundButtonImage.GetComponent<Image>();
+
+        if (!AudioListener.pause)
+        {
+            Debug.Log("Couper le son");
+            imageComponent.sprite = Resources.Load<Sprite>("Icones/sound");
+        }
+        else
+        {
+            Debug.Log("Activer le son");
+            imageComponent.sprite = Resources.Load<Sprite>("Icones/nosound");
+        }
+
+    }
 }

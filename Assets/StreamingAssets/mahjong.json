@@ -1,97 +1,116 @@
 {
     "mahjong": [
-        {
-            "name": "Beer-illiant",
-            "description": "La description pour la beer appelée Beer-illiant"
-        },
-        {
-            "name": "Beer-rito",
-            "description": "La description pour la beer appelée Beer-rito"
-        }
+      {
+        "name": "Beer-illiant",
+        "description": "La description pour la beer appelée Beer-illiant",
+        "sprite": "Beer-illiant"
+      },
+      {
+        "name": "Beer-rito",
+        "description": "La description pour la beer appelée Beer-rito",
+        "sprite": "Beer-rito"
+      }
         ,
-        {
-            "name": "Beer-thday",
-            "description": "Parfois, je pense que je vais avoir besoin de mettre une description un peu longue, car je vais avoir plein de choses à raconter. Elles ne seront pas toujours bien écrites."
-        }
+      {
+        "name": "Beer-thday",
+        "description": "Parfois, je pense que je vais avoir besoin de mettre une description un peu longue, car je vais avoir plein de choses à raconter. Elles ne seront pas toujours bien écrites.",
+        "sprite": "Beer-thday"
+      }
         ,
-        {
-            "name": "Beer-opoly",
-            "description": "La description pour la beer appelée Beer-opoly"
-        }
+      {
+        "name": "Beer-opoly",
+        "description": "La description pour la beer appelée Beer-opoly",
+        "sprite": "Beer-opoly"
+      }
         ,
-        {
-            "name": "Beer-nanza",
-            "description": "La description pour la beer appelée Beer-nanza"
-        }
+      {
+        "name": "Beer-nanza",
+        "description": "La description pour la beer appelée Beer-nanza",
+        "sprite": "Beer-nanza"
+      }
         ,
-        {
-            "name": "Beer-becue",
-            "description": "La description pour la beer appelée Beer-becue"
-        }
+      {
+        "name": "Beer-becue",
+        "description": "La description pour la beer appelée Beer-becue",
+        "sprite": "Beer-becue"
+      }
         ,
-        {
-            "name": "Beer-gamote",
-            "description": "La description pour la beer appelée Beer-gamote"
-        }
+      {
+        "name": "Beer-gamote",
+        "description": "La description pour la beer appelée Beer-gamote",
+        "sprite": "Beer-gamote"
+      }
         ,
-        {
-            "name": "Beer-ific",
-            "description": "La description pour la beer appelée Beer-ific"
-        }
+      {
+        "name": "Beer-ific",
+        "description": "La description pour la beer appelée Beer-ific",
+        "sprite": "Beer-ific"
+      }
         ,
-        {
-            "name": "Beer-arium",
-            "description": "La description pour la beer appelée Beer-arium"
-        }
+      {
+        "name": "Beer-arium",
+        "description": "La description pour la beer appelée Beer-arium",
+        "sprite": "Beer-arium"
+      }
         ,
-        {
-            "name": "Cheers-to-Beer",
-            "description": "La description pour la beer appelée Cheers-to-Beer"
-        }
+      {
+        "name": "Cheers-to-Beer",
+        "description": "La description pour la beer appelée Cheers-to-Beer",
+        "sprite": "Cheers-to-Beer"
+      }
         ,
-        {
-            "name": "Beer-ology",
-            "description": "La description pour la beer appelée Beer-ology"
-        }
+      {
+        "name": "Beer-ology",
+        "description": "La description pour la beer appelée Beer-ology",
+        "sprite": "Beer-ology"
+      }
         ,
-        {
-            "name": "Beer-ocity",
-            "description": "La description pour la beer appelée Beer-ocity"
-        }
+      {
+        "name": "Beer-ocity",
+        "description": "La description pour la beer appelée Beer-ocity",
+        "sprite": "Beer-ocity"
+      }
         ,
-        {
-            "name": "Beer-lin",
-            "description": "La description pour la beer appelée Beer-lin"
-        }
+      {
+        "name": "Beer-lin",
+        "description": "La description pour la beer appelée Beer-lin",
+        "sprite": "Beer-lin"
+      }
         ,
-        {
-            "name": "Beer-y",
-            "description": "La description pour la beer appelée Beer-y"
-        }
+      {
+        "name": "Beer-y",
+        "description": "La description pour la beer appelée Beer-y",
+        "sprite": "Beer-y"
+      }
         ,
-        {
-            "name": "Beer-shop",
-            "description": "La description pour la beer appelée Beer-shop"
-        }
+      {
+        "name": "Beer-shop",
+        "description": "La description pour la beer appelée Beer-shop",
+        "sprite": "Beer-shop"
+      }
         ,
-        {
-            "name": "Beer-maid",
-            "description": "La description pour la beer appelée Beer-maid"
-        }
+      {
+        "name": "Beer-maid",
+        "description": "La description pour la beer appelée Beer-maid",
+        "sprite": "Beer-maid"
+      }
         ,
-        {
-            "name": "Beer-tender",
-            "description": "La description pour la beer appelée Beer-tender"
-        }
+      {
+        "name": "Beer-tender",
+        "description": "La description pour la beer appelée Beer-tender",
+        "sprite": "Beer-tender"
+      }
         ,
-        {
-            "name": "Beer-acle",
-            "description": "La description pour la beer appelée Beer-acle"
-        }
+      {
+        "name": "Beer-acle",
+        "description": "La description pour la beer appelée Beer-acle",
+        "sprite": "Beer-acle"
+      }
         ,
-        {
-            "name": "Beer-mazing",
-            "description": "La description pour la beer appelée Beer-mazing"
-        }
+      {
+        "name": "Beer-mazing",
+        "description": "La description pour la beer appelée Beer-mazing",
+        "sprite": "Beer-mazing"
+      }
     ]
 }

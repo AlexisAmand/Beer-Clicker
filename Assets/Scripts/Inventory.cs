@@ -103,11 +103,6 @@ public class Inventory : MonoBehaviour
             UpdateInventoryImages(); // Met à jour l'affichage avec les bières chargées
         }
 
-
-
-
-
-
         // string filePath = Path.Combine(Application.streamingAssetsPath, "beers.txt");
         // lineNumber = File.ReadAllLines(filePath).Length;
         foundText.text = "Bières spéciales trouvées : 0 / " + lineNumber;
