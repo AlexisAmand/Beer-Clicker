@@ -902,6 +902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenshotFileName: screenshot
   sceneToLoad: OptionsScene
+  SoundButtonText: {fileID: 0}
+  SoundButtonImage: {fileID: 0}
 --- !u!1 &940525347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenshotFileName: screenshot
   sceneToLoad: ChallengeScene
+  SoundButtonText: {fileID: 0}
+  SoundButtonImage: {fileID: 0}
 --- !u!1 &1156228864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.7.89
+  m_text: Version 0.7.121
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f629c6e43dba4bf38cb74d8860150664, type: 2}
