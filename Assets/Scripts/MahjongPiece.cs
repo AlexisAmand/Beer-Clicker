@@ -22,8 +22,6 @@ public class MahjongPiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void Start()
     {
-
-        // pieceName = GetComponent<SpriteRenderer>().sprite.name;
         pieceName = GetComponent<Image>().sprite.name;
 
         string filePath = Path.Combine(Application.streamingAssetsPath, "mahjong.json");
@@ -31,14 +29,14 @@ public class MahjongPiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
-            Debug.Log("Contenu du JSON : " + json); // Pour vérifier le contenu
+            Debug.Log("Contenu du JSON : " + json); // Pour vÃ©rifier le contenu
 
-            // Désérialisation avec JsonUtility
+            // DÃ©sÃ©rialisation avec JsonUtility
             mahjongData = JsonUtility.FromJson<MahjongData>(json);
 
             if (mahjongData != null && mahjongData.mahjong != null)
             {
-                Debug.Log("JSON chargé correctement !");
+                Debug.Log("JSON chargÃ© correctement !");
             }
             else
             {
@@ -47,7 +45,7 @@ public class MahjongPiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         }
         else
         {
-            Debug.LogError("Le fichier JSON n'existe pas à ce chemin.");
+            Debug.LogError("Le fichier JSON n'existe pas Ã  ce chemin.");
         }
     }
 
@@ -60,12 +58,12 @@ public class MahjongPiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         string description = GetDescriptionFromJSON(pieceName);
         Debug.Log(description);
-        ShowText(description); // Met à jour le texte
+        ShowText(description); // Met Ã  jour le texte
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        ShowText(""); // Efface le texte ou remet à zéro
+        ShowText(""); // Efface le texte ou remet Ã  zÃ©ro
     }
 
 
@@ -80,17 +78,17 @@ public class MahjongPiece : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             if (name == msg.name)
             {
-                return msg.description; // Retourne la description dès qu'elle est trouvée
+                return msg.description; // Retourne la description dÃ©s qu'elle est trouvÃ©e
             }
         }
 
-        // Si aucune description n'est trouvée après avoir vérifié toutes les pièces
+        // Si aucune description n'est trouvÃ©e aprÃ¨s avoir vÃ©rifiÃ© toutes les piÃ¨ces
         return "Oups, pas de description";
     }
 
     public void ShowText(string description)
     {
-        // Si une coroutine est déjà en cours, on l'arrête
+        // Si une coroutine est dÃ©jÃ  en cours, on l'arrÃªte
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);

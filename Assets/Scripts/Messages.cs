@@ -19,7 +19,7 @@ public class MessageData
 
 public class Messages : MonoBehaviour
 {
-    public TextMeshProUGUI FunnyMessage; // Référence au texte UI pour le message marrant
+    public TextMeshProUGUI FunnyMessage; // RÃ©fÃ©rence au texte UI pour le message marrant
     public GameObject MessagePanel; // Le panel qui s'affiche/masque
     public BeerClicker beerClicker;
     private MessageData messageData;
@@ -36,14 +36,14 @@ public class Messages : MonoBehaviour
         if (File.Exists(MessageFilePath))
         {
             string json = File.ReadAllText(MessageFilePath);
-            Debug.Log("Contenu du JSON : " + json); // Pour vérifier le contenu
+            Debug.Log("Contenu du JSON : " + json); // Pour vÃ©rifier le contenu
 
-            // Désérialisation avec JsonUtility
+            // DÃ©sÃ©rialisation avec JsonUtility
             messageData = JsonUtility.FromJson<MessageData>(json);
 
             if (messageData != null && messageData.messages != null)
             {
-                Debug.Log("JSON chargé correctement !");
+                Debug.Log("JSON chargÃ© correctement !");
             }
             else
             {
@@ -52,7 +52,7 @@ public class Messages : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Le fichier JSON n'existe pas à ce chemin.");
+            Debug.LogError("Le fichier JSON n'existe pas Ã  ce chemin.");
         }
 
     }
@@ -61,7 +61,7 @@ public class Messages : MonoBehaviour
     {
         int currentBeersCollected = beerClicker.beersCollected;
 
-        // Appelle GetFunnyMessage seulement si le nombre de bières a changé
+        // Appelle GetFunnyMessage seulement si le nombre de biÃ©res a changÃ©
         if (currentBeersCollected != beersCollected)
         {
             beersCollected = currentBeersCollected;
@@ -71,8 +71,6 @@ public class Messages : MonoBehaviour
 
     private void GetFunnyMessage(int beers)
     {
-        //Debug.Log("Valeur de beers : " + beers); // Vérifie la valeur de beers
-
         // Convertir beers en string
         string beersKey = beers.ToString();
 
@@ -81,19 +79,17 @@ public class Messages : MonoBehaviour
         {
             if (msg.key == beersKey)
             {
-                //Debug.Log("Message trouvé : " + msg.value);
-                FunnyMessage.text = msg.value; // Assigne le message trouvé
+                //Debug.Log("Message trouvÃ© : " + msg.value);
+                FunnyMessage.text = msg.value; // Assigne le message trouvÃ©
 
-                // Vérifie si le panel n'est pas déjà actif avant de le réafficher
+                // VÃ©rifie si le panel n'est pas dÃ©jÃ  actif avant de le rÃ©afficher
                 if (!MessagePanel.activeSelf)
                 {
                     StartCoroutine(ShowMessage()); // Affiche le message
                 }
-                return; // Sortir de la méthode après avoir trouvé le message
+                return; // Sortir de la mÃ©thode aprÃ¨s avoir trouvÃ© le message
             }
         }
-
-        //Debug.LogWarning("Aucun message trouvé pour " + beers);
     }
 
     public IEnumerator ShowMessage()
@@ -102,7 +98,7 @@ public class Messages : MonoBehaviour
         Debug.Log("Activation du panel");
         MessagePanel.gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
-        Debug.Log("Désactivation du panel");
+        Debug.Log("DÃ©sactivation du panel");
         MessagePanel.gameObject.SetActive(false);
     }
 

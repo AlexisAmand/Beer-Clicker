@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914851684992984882}
   - component: {fileID: 1914851684992984877}
+  - component: {fileID: 1222476827767835634}
   m_Layer: 0
   m_Name: Screenshot
   m_TagString: Untagged
@@ -24,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914851684992984876}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1406721, y: -0.90999806, z: -10.548303}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1914851684992984877
 MonoBehaviour:
@@ -45,3 +46,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenshotFileName: screenshot
+  sceneToLoad: 
+  beerClicker: {fileID: 0}
+  confirmationExit: {fileID: 1222476827767835634}
+  SoundButtonText: {fileID: 0}
+  SoundButtonImage: {fileID: 0}
+--- !u!114 &1222476827767835634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914851684992984876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8943c74c99539545935c8267f056184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxColliderObject: {fileID: 0}
+  ExitGame: {fileID: 0}

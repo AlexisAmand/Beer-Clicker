@@ -39,7 +39,7 @@ Can you collect them all?
 
 * Windows 11
 * Visual Studio 17.11.5
-* Visual Studio Code 1.93.1
+* Visual Studio Code 1.95.1
 * Unity 6000.0.23f1
 * Gimp 2.10.38
 

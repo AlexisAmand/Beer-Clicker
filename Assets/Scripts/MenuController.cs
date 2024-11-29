@@ -1,25 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Ce script contrôle le menu principal
-// et par extension, les boutons sur les écrans de jeu
+// Ce script contrÃ´le le menu principal
+// et par extension, les boutons sur les Ã©crans de jeu
 
 public class MenuController : MonoBehaviour
 {
-    public int beersCollected; // Compteur de bières collectées
+    public int beersCollected; // Compteur de biÃ©res collectÃ©es
 
     // Fonction pour une nouvelle partie
     public void NewGame()
     {
-        // Nouvelle partie : le nombre de bières bues est initialisé à 0
+        // Nouvelle partie : le nombre de biÃ©res bues est initialisÃ© Ã  0
         beersCollected = 0;
         PlayerPrefs.SetInt("beersCollected", beersCollected);
-        // Nouvelle partie : la liste des bières spéciales est vidée
+        // Nouvelle partie : la liste des biÃ©res spÃ©ciales est vidÃ©e
         PlayerPrefs.SetString("specialBeersCollected", "");
-        // Sauvegarde des données
+        // Sauvegarde des donnÃ©es
         PlayerPrefs.Save(); 
 
-        // Chargement de la scène de jeu
+        // Chargement de la scÃ¨ne de jeu
         SceneManager.LoadScene("Scene01"); 
     }
 
@@ -35,7 +35,7 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-    // Fonction pour retourner à l'écran principal
+    // Fonction pour retourner Ã  l'Ã©cran principal
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainScene"); 

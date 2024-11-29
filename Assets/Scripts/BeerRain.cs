@@ -6,7 +6,7 @@ public class BeerRain : MonoBehaviour
 {
 
     public GameObject beerPrefab; // Assure-toi que c'est un prefab UI
-    public RectTransform canvas; // Référence à ton canvas
+    public RectTransform canvas; // RÃ©fÃ©rence Ã  ton canvas
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class BeerRain : MonoBehaviour
 
         for (var i = 0; i < 10; i++)
         {
-            // Créer des positions aléatoires
+            // CrÃ©er des positions alÃ©atoires
             float offsetX = beerPrefab.GetComponent<RectTransform>().rect.width / 2;
             float offsetY = beerPrefab.GetComponent<RectTransform>().rect.height / 2;
             

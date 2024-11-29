@@ -7,38 +7,56 @@ public class ScreenshotTaker : MonoBehaviour
 {
     public string screenshotFileName = "screenshot";
     public string sceneToLoad;
+    public BeerClicker beerClicker;
+    public ConfirmationExit confirmationExit;
 
     // Bouton pour le son
     public TextMeshProUGUI SoundButtonText;
     public GameObject SoundButtonImage;
 
+    private Scene currentScene;
+
     private void Start()
     {
         SoundButtonText.text = "Couper le son";
+        currentScene = SceneManager.GetActiveScene();
     }
 
     void Update()
     {
-        // Si on appuie sur F12, prends une capture d'écran
+        // Si on appuie sur F12, prends une capture d'Ã©cran
         if (Input.GetKeyDown(KeyCode.S))
         {
-            // Nom du fichier de capture avec un horodatage pour éviter les écrasements
+            // Nom du fichier de capture avec un horodatage pour Ã©viter les Ã©crasements
             string filePath = screenshotFileName + "_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".png";
             ScreenCapture.CaptureScreenshot(filePath);
         }
+
+        // Si on appuie sur C, c'est comme si on clique
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            beerClicker.OnMouseDown();
+        }
+
+        // Si on appuie sur C, c'est comme si on clique
+        if (Input.GetKeyDown(KeyCode.Escape) && currentScene.name != "MainScene")
+        {
+
+            confirmationExit.ShowConfirmation();
+        }
     }
 
-    // Fonction pour retourner à l'écran principal
+    // Fonction pour retourner Ã  l'Ã©cran principal
     public void LoadScene()
     {
-        Debug.Log("Chargement de la scène : " + sceneToLoad);
+        Debug.Log("Chargement de la scÃ¨ne : " + sceneToLoad);
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
             SceneManager.LoadScene(sceneToLoad);
         }
         else
         {
-            Debug.LogError("Le nom de la scène est vide ou invalide !");
+            Debug.LogError("Le nom de la scÃ¨ne est vide ou invalide !");
         }
     }
 
