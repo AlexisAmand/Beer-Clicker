@@ -74,7 +74,8 @@ public class BeerClicker : MonoBehaviour
     public TextMeshProUGUI FunnyMessage; // Référence au texte UI pour le message marrant
     public GameObject MessagePanel; // Le panel qui s'affiche/masque
 
-    private int beerAmount = 1;
+    private int beerAmount = 2; 
+    private int beerAmountBefore;
 
     private MessageData messageData;
     private MahjongData mahjongData;
@@ -304,14 +305,14 @@ public class BeerClicker : MonoBehaviour
             BonusText.text = bonus.textDescription;
             BonusText.gameObject.SetActive(true);
             BonusDuration = bonus.BonusDuration; // Durée spécifique du bonus
-            beerAmount = bonus.beerAmount;
+            beerAmountBefore = beerAmount;
+            beerAmount = beerAmount * bonus.beerAmount;
 
             // Lance la bonne coroutine en fonction du type de bonus
             StartCoroutine(ActivateBonus(bonusType, bonus));
 
         }
     }
-
     private IEnumerator ActivateBonus(int bonusValue, Bonus bonus)
     {
 
@@ -339,7 +340,7 @@ public class BeerClicker : MonoBehaviour
 
         bonus.isActive = false;
         // bonus.text = "vide";
-        beerAmount = 1;
+        beerAmount = beerAmountBefore;
         BonusText.gameObject.SetActive(false); // cache le texte
         ChronoText.gameObject.SetActive(false); // Cache le chrono
     }
